@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Chart,
   ChartTooltip,
@@ -11,7 +11,15 @@ import {
   ChartLegendTitle,
 } from "@progress/kendo-react-charts";
 
-const ConversionsChart = ({ data }) => {
+import useViewPort from "../../Hooks/useViewPort";
+
+const ConversionsChart = ({ data, positionData }) => {
+  const [chartHeight, setChartHeight] = useState(0);
+  const [chartWidth, setChartWidth] = useState(0);
+  const chartRef = useRef();
+
+  const { width } = useViewPort();
+
   const dates = [];
   const views = [];
 
@@ -19,6 +27,13 @@ const ConversionsChart = ({ data }) => {
     dates.push(item.date);
     views.push(item.value);
   });
+
+  useEffect(() => {
+    setChartHeight(176 + (positionData.rowSpan - 1) * 265);
+    setChartWidth(
+      width / (4 / positionData.colSpan) - (50.5 + positionData.colSpan * 3.5)
+    );
+  }, [positionData, width]);
 
   const series = [
     {
@@ -45,6 +60,8 @@ const ConversionsChart = ({ data }) => {
   const SharedTooltip = (props) => {
     const { category, points } = props;
 
+    console.log(props);
+
     return (
       <div>
         <div>{category}</div>
@@ -66,8 +83,10 @@ const ConversionsChart = ({ data }) => {
       //     lock: "y",
       //   },
       // }}
+      ref={chartRef}
       style={{
-        height: "100%",
+        height: chartHeight,
+        width: chartWidth,
       }}
     >
       <ChartTooltip shared={true} render={sharedTooltipRender} />
