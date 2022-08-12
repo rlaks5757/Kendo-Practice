@@ -172,6 +172,18 @@ const TileLayoutMain = () => {
     });
   };
 
+  useEffect(() => {
+    const filterData = testData.filter((com) => {
+      return com.materialName !== "";
+    });
+
+    const dataMap = filterData.map((com) => {
+      return com.materialName;
+    });
+
+    console.log([...new Set(dataMap)]);
+  }, []);
+
   return (
     <div className="titleLayout">
       <Button
@@ -201,6 +213,13 @@ const TileLayoutMain = () => {
           onReposition={handleReposition}
         />
       )}
+      {testData.map((com) => {
+        return com === "사용안함" ? (
+          <div>사용안한다고</div>
+        ) : (
+          <div>사용하는거</div>
+        );
+      })}
     </div>
   );
 };
@@ -290,5 +309,280 @@ const mobileView = [
     col: 1,
     colSpan: 4,
     rowSpan: 1,
+  },
+];
+
+const testData = [
+  {
+    name: "호퍼(좌좌)",
+    isOff: false,
+    materialName: "비트   시그니처",
+    max: 90,
+    usage: 70,
+    materialdate: null,
+  },
+  {
+    name: "호퍼(좌우)",
+    isOff: false,
+    materialName: "브라질 카쇼에이라",
+    max: 90,
+    usage: 22,
+    materialdate: null,
+  },
+  {
+    name: "호퍼(우좌)",
+    isOff: false,
+    materialName: "비트   시그니처",
+    max: 90,
+    usage: 75,
+    materialdate: null,
+  },
+  {
+    name: "호퍼(우우)",
+    isOff: false,
+    materialName: "엑셀소 디카페인",
+    max: 90,
+    usage: 25,
+    materialdate: null,
+  },
+  {
+    name: "우유(좌)",
+    isOff: false,
+    materialName: "우유",
+    max: 48,
+    usage: 11,
+    materialdate: null,
+  },
+  {
+    name: "우유(우)",
+    isOff: false,
+    materialName: "우유",
+    max: 48,
+    usage: 19,
+    materialdate: null,
+  },
+  {
+    name: "제빙기1(좌)",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "제빙기2(우)",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "디스펜서(좌)",
+    isOff: false,
+    materialName: "컵",
+    max: 225,
+    usage: 46,
+    materialdate: null,
+  },
+  {
+    name: "디스펜서(우)",
+    isOff: false,
+    materialName: "컵",
+    max: 225,
+    usage: 186,
+    materialdate: null,
+  },
+  {
+    name: "쥬스디스펜서(좌)",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "쥬스디스펜서(우)",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "노즐1",
+    isOff: false,
+    materialName: "사용 안함",
+    max: 0,
+    usage: 0,
+    materialdate: null,
+  },
+  {
+    name: "노즐2",
+    isOff: false,
+    materialName: "바나나시럽",
+    max: 20,
+    usage: 0,
+    materialdate: null,
+  },
+  {
+    name: "노즐3",
+    isOff: false,
+    materialName: "초코시럽",
+    max: 21,
+    usage: 10,
+    materialdate: null,
+  },
+  {
+    name: "노즐4",
+    isOff: false,
+    materialName: "바닐라시럽",
+    max: 35,
+    usage: 9,
+    materialdate: null,
+  },
+  {
+    name: "노즐5",
+    isOff: false,
+    materialName: "청포도시럽",
+    max: 22,
+    usage: 10,
+    materialdate: null,
+  },
+  {
+    name: "노즐6",
+    isOff: false,
+    materialName: "스위티자몽시럽",
+    max: 21,
+    usage: 6,
+    materialdate: null,
+  },
+  {
+    name: "노즐7",
+    isOff: true,
+    materialName: "레몬블랙티 시럽",
+    max: 20,
+    usage: 0,
+    materialdate: null,
+  },
+  {
+    name: "노즐8",
+    isOff: false,
+    materialName: "파인애플시럽",
+    max: 20,
+    usage: 14,
+    materialdate: null,
+  },
+  {
+    name: "픽업1",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "픽업2",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "픽업3",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "픽업4",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "픽업5",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "픽업6",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대1",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대2",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대3",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대4",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대5",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "보관대6",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "태블릿1",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
+  },
+  {
+    name: "태블릿2",
+    isOff: false,
+    materialName: "",
+    max: -1,
+    usage: -1,
+    materialdate: null,
   },
 ];
