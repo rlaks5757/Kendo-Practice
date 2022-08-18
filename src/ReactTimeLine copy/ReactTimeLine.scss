@@ -1,0 +1,33 @@
+.rt-track-key__entry {
+  height: 100px;
+}
+
+.rt-track__elements {
+  height: 100px;
+}
+
+.k-icon.k-i-circle {
+  font-size: 30px;
+}
+
+.rt-track__element {
+  top: 30px;
+}
+
+.rt-element__content.milestone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .rt-element__title {
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: flex-start;
+    z-index: 100;
+  }
+}
+
+.rt-element__title2 {
+  height: 25px;
+}

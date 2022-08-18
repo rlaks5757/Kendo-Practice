@@ -1,0 +1,5093 @@
+[
+  {
+    "id": "track-1",
+    "title": "Track 1",
+    "elements": [
+      {
+        "id": "t-1-el-1",
+        "title": "incendiary panel beater",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-1-el-2",
+        "title": "mordant make-up artist",
+        "start": "2021-01-31T15:00:00.000Z",
+        "end": "2021-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-1-el-3",
+        "title": "nefarious artisan",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2022-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-1-el-4",
+        "title": "incendiary model",
+        "start": "2022-10-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-1-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "nefarious bushes",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "execrable miller",
+            "start": "2020-05-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "insolent flatter",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "bilious silversmith",
+            "start": "2021-05-31T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "redolent inker",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-1-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "voluble stick figures",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "effulgent beader",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "rhadamanthine coppersmith",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "spasmodic coppersmith",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-2",
+    "title": "Track 2",
+    "elements": [
+      {
+        "id": "t-2-el-1",
+        "title": "wheedling bunny",
+        "start": "2019-12-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-2-el-2",
+        "title": "didactic plant operator",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2020-12-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-2-el-3",
+        "title": "sagacious flatter",
+        "start": "2021-06-30T15:00:00.000Z",
+        "end": "2021-08-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-2-el-4",
+        "title": "insidious dolls",
+        "start": "2022-02-28T15:00:00.000Z",
+        "end": "2022-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-2-el-5",
+        "title": "dilatory rainbows",
+        "start": "2022-11-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-2-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "voracious trampoline",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "mannered bunny",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2020-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "feckless plumber",
+            "start": "2020-12-31T15:00:00.000Z",
+            "end": "2021-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "taciturn artist",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "ruminative inker",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-2-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "cerulean set decorator",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "mendacious foreman",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "tremulous praying mantis",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "concomitant filling station attendant",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-5",
+            "title": "effulgent soaper",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-2-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "adroit coppersmith",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "serpentine make-up artist",
+            "start": "2020-06-30T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "contumacious teacher",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "limpid set decorator",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-5",
+            "title": "serpentine carrot",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-3",
+    "title": "Track 3",
+    "elements": [
+      {
+        "id": "t-3-el-1",
+        "title": "rhadamanthine laser",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-3-el-2",
+        "title": "ubiquitous circus",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2021-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-3-el-3",
+        "title": "salubrious unicorn",
+        "start": "2021-12-01T00:00:00.000Z",
+        "end": "2022-04-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-3-el-4",
+        "title": "sartorial auto mechanic",
+        "start": "2022-12-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-3-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "nefarious nibblets",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-02-29T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "mordant artist",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "turbulent teacher",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "voluble kazoo",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "efficacious nibblets",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-3-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "incendiary praying mantis",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "antic toilet",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "luminous plumber",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "gustatory wheelwright",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-5",
+            "title": "antic stick figures",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-3-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "tremulous toejam",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "spasmodic praying mantis",
+            "start": "2020-06-30T15:00:00.000Z",
+            "end": "2020-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "amatory salad",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "uxorious beader",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-3-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "serpentine laser",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "dilatory toilet",
+            "start": "2020-12-31T15:00:00.000Z",
+            "end": "2021-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "rebarbative maintenance engineering",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "verdant bushes",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-3-5",
+        "title": "Subtrack 5",
+        "elements": [
+          {
+            "id": "t-5-el-1",
+            "title": "intransigent apples",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-2",
+            "title": "salubrious wheelwright",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-3",
+            "title": "ubiquitous flatter",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-4",
+            "title": "trenchant sawfiler",
+            "start": "2022-11-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-4",
+    "title": "Track 4",
+    "elements": [
+      {
+        "id": "t-4-el-1",
+        "title": "heuristic beets",
+        "start": "2020-03-31T15:00:00.000Z",
+        "end": "2020-06-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0085B6",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-4-el-2",
+        "title": "platitudinous apples",
+        "start": "2020-07-31T15:00:00.000Z",
+        "end": "2021-01-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-4-el-3",
+        "title": "wheedling teacher",
+        "start": "2021-01-31T15:00:00.000Z",
+        "end": "2021-08-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-4-el-4",
+        "title": "animistic hot air balloon",
+        "start": "2022-02-28T15:00:00.000Z",
+        "end": "2022-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-4-el-5",
+        "title": "spasmodic producer",
+        "start": "2022-12-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-4-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "fecund make-up artist",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "comely miller",
+            "start": "2021-01-31T15:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "meretricious plant operator",
+            "start": "2021-05-31T15:00:00.000Z",
+            "end": "2021-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "mordant filling station attendant",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "histrionic silversmith",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-5",
+    "title": "Track 5",
+    "elements": [
+      {
+        "id": "t-5-el-1",
+        "title": "didactic captain",
+        "start": "2020-02-29T15:00:00.000Z",
+        "end": "2020-11-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-5-el-2",
+        "title": "judicious plant operator",
+        "start": "2020-12-31T15:00:00.000Z",
+        "end": "2021-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-5-el-3",
+        "title": "risible cupcake",
+        "start": "2021-06-30T15:00:00.000Z",
+        "end": "2022-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-5-el-4",
+        "title": "ubiquitous limner",
+        "start": "2022-04-30T15:00:00.000Z",
+        "end": "2022-12-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-5-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "ruminative clerk of the chapel",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-02-29T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "risible plumber",
+            "start": "2020-07-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "corpulent laser",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "amatory dragons",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "heuristic flatter",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-6",
+            "title": "meretricious unicorn",
+            "start": "2022-11-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-5-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "bilious auto mechanic",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "corpulent penciller",
+            "start": "2020-07-31T15:00:00.000Z",
+            "end": "2020-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "turbulent clerk of the chapel",
+            "start": "2020-12-31T15:00:00.000Z",
+            "end": "2021-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "parsimonious jellybeans",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-5",
+            "title": "rebarbative plant operator",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-5-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "heuristic director",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "serpentine circus",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "trenchant foreman",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "mannered circus",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-5-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "egregious filling station attendant",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "judicious stick figures",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "caustic toejam",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "nefarious exorcism",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-5",
+            "title": "insidious make-up artist",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-6",
+    "title": "Track 6",
+    "elements": [
+      {
+        "id": "t-6-el-1",
+        "title": "comely patternmaker",
+        "start": "2020-02-29T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-6-el-2",
+        "title": "adamant sawfiler",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2021-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FF005D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-6-el-3",
+        "title": "noxious panel beater",
+        "start": "2021-06-30T15:00:00.000Z",
+        "end": "2022-01-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0085B6",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-6-el-4",
+        "title": "luminous filling station attendant",
+        "start": "2022-02-28T15:00:00.000Z",
+        "end": "2022-08-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-6-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "feckless silversmith",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "wheedling sawfiler",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "querulous circus",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "concomitant dolls",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "serpentine banjo",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-6-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "spasmodic leadman",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "rhadamanthine curtains",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "feckless make-up artist",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "pervasive curtains",
+            "start": "2022-06-30T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-7",
+    "title": "Track 7",
+    "elements": [
+      {
+        "id": "t-7-el-1",
+        "title": "dilatory miller",
+        "start": "2019-12-31T15:00:00.000Z",
+        "end": "2020-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-7-el-2",
+        "title": "arcadian beader",
+        "start": "2020-03-31T15:00:00.000Z",
+        "end": "2020-06-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-7-el-3",
+        "title": "munificent toilet",
+        "start": "2020-07-31T15:00:00.000Z",
+        "end": "2021-01-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-7-el-4",
+        "title": "egregious laser",
+        "start": "2021-08-31T15:00:00.000Z",
+        "end": "2022-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-7-el-5",
+        "title": "lachrymose limner",
+        "start": "2022-03-31T15:00:00.000Z",
+        "end": "2022-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-7-el-6",
+        "title": "baleful animator",
+        "start": "2022-12-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-7-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "propitious nibblets",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "mordant maintenance engineering",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "meretricious musician",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "friable bobbin boy",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "calamitous filling station attendant",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-7-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "munificent dolls",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "endemic colorist",
+            "start": "2020-07-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "limpid senor",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "dilatory carrot",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-5",
+            "title": "bilious carnival",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-6",
+            "title": "effulgent plant operator",
+            "start": "2022-10-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-7-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "feckless ninja",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "incendiary carrot",
+            "start": "2020-06-30T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "baleful curtains",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "gustatory glitter",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-5",
+            "title": "voluble rainbows",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-7-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "zealous soaper",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "defamatory glitter",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "strident ninja",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "parsimonious jellybeans",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-8",
+    "title": "Track 8",
+    "elements": [
+      {
+        "id": "t-8-el-1",
+        "title": "dilatory stylist",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-8-el-2",
+        "title": "recalcitant praying mantis",
+        "start": "2020-07-31T15:00:00.000Z",
+        "end": "2020-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-8-el-3",
+        "title": "limpid opera singer",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2021-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-8-el-4",
+        "title": "sclerotic coppersmith",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2021-12-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FF005D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-8-el-5",
+        "title": "pendulous woodworkers",
+        "start": "2022-01-31T15:00:00.000Z",
+        "end": "2022-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0085B6",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-8-el-6",
+        "title": "baleful sawfiler",
+        "start": "2022-08-31T15:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-8-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "irksome hot air balloon",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "sagacious colorist",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "insidious foreman",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "mendacious mechanic",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "voluble captain",
+            "start": "2022-06-30T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-8-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "inveterate limner",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "serpentine circus",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "pernicious animator",
+            "start": "2021-10-01T00:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "irksome bobbin boy",
+            "start": "2022-11-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-8-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "wheedling set decorator",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "meretricious toilet",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "tenacious sea barnacles",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "inveterate unicorn",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-8-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "judicious toilet",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "cerulean filling station attendant",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "tremulous woodworkers",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "mannered limner",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-5",
+            "title": "wheedling wheelwright",
+            "start": "2022-10-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-9",
+    "title": "Track 9",
+    "elements": [
+      {
+        "id": "t-9-el-1",
+        "title": "garrulous sawfiler",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-9-el-2",
+        "title": "uxorious penciller",
+        "start": "2020-12-31T15:00:00.000Z",
+        "end": "2021-08-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-9-el-3",
+        "title": "tremulous ninja",
+        "start": "2022-01-31T15:00:00.000Z",
+        "end": "2022-08-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-9-el-4",
+        "title": "serpentine unicorn",
+        "start": "2022-11-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-9-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "adamant producer",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "redolent designer",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "rebarbative soaper",
+            "start": "2021-04-30T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "salubrious hot air balloon",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-9-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "tremulous plant operator",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "wheedling dolls",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "pendulous locomotive",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "adroit apples",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-9-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "bilious cupcake",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "execrable gnomes",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "limpid penciller",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "obtuse carrot",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-5",
+            "title": "incendiary rainbows",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-9-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "crapulous rainbows",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "heuristic patternmaker",
+            "start": "2020-04-30T15:00:00.000Z",
+            "end": "2020-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "contumacious flatter",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "redolent producer",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-5",
+            "title": "didactic toilet",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-9-5",
+        "title": "Subtrack 5",
+        "elements": [
+          {
+            "id": "t-5-el-1",
+            "title": "irksome director",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-2",
+            "title": "precipitate artisan",
+            "start": "2021-01-31T15:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-3",
+            "title": "risible sawfiler",
+            "start": "2021-10-01T00:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-4",
+            "title": "munificent statue",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-10",
+    "title": "Track 10",
+    "elements": [
+      {
+        "id": "t-10-el-1",
+        "title": "calamitous coppersmith",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-10-el-2",
+        "title": "wheedling ninja",
+        "start": "2020-11-01T00:00:00.000Z",
+        "end": "2021-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-10-el-3",
+        "title": "pervasive model",
+        "start": "2021-08-31T15:00:00.000Z",
+        "end": "2021-12-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-10-el-4",
+        "title": "propitious kazoo",
+        "start": "2022-05-31T15:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-10-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "feckless penciller",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "concomitant set decorator",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "redolent scenographer",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "effulgent glitter",
+            "start": "2021-10-01T00:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "meretricious artisan",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-11",
+    "title": "Track 11",
+    "elements": [
+      {
+        "id": "t-11-el-1",
+        "title": "minatory artist",
+        "start": "2020-02-29T15:00:00.000Z",
+        "end": "2020-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-11-el-2",
+        "title": "mendacious sawfiler",
+        "start": "2020-12-01T00:00:00.000Z",
+        "end": "2021-04-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-11-el-3",
+        "title": "parsimonious foreman",
+        "start": "2021-08-31T15:00:00.000Z",
+        "end": "2021-11-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-11-el-4",
+        "title": "redolent pancake",
+        "start": "2022-04-30T15:00:00.000Z",
+        "end": "2022-12-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-11-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "mannered opera singer",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "bilious toilet",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "mannered toejam",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "lachrymose captain",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-11-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "ubiquitous curtains",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "crapulous kazoo",
+            "start": "2020-05-31T15:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "querulous ukulele",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "salubrious musician",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-11-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "equanimous cupcake",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "voracious patternmaker",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "querulous producer",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "judicious limner",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-5",
+            "title": "intransigent banjo",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-11-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "bellicose chair",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "minatory dolls",
+            "start": "2020-11-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "jocular model",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "munificent model",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-12",
+    "title": "Track 12",
+    "elements": [
+      {
+        "id": "t-12-el-1",
+        "title": "meretricious sea barnacles",
+        "start": "2020-03-31T15:00:00.000Z",
+        "end": "2020-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-12-el-2",
+        "title": "guileless model",
+        "start": "2020-11-01T00:00:00.000Z",
+        "end": "2020-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-12-el-3",
+        "title": "calamitous salad",
+        "start": "2021-04-30T15:00:00.000Z",
+        "end": "2021-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-12-el-4",
+        "title": "comely cookies",
+        "start": "2021-12-31T15:00:00.000Z",
+        "end": "2022-06-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-12-el-5",
+        "title": "rebarbative potato",
+        "start": "2022-12-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-12-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "withering trampoline",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "obtuse apples",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "withering locomotive",
+            "start": "2021-10-01T00:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "judicious nibblets",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-13",
+    "title": "Track 13",
+    "elements": [
+      {
+        "id": "t-13-el-1",
+        "title": "garrulous rainbows",
+        "start": "2020-03-31T15:00:00.000Z",
+        "end": "2020-06-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-13-el-2",
+        "title": "luminous make-up artist",
+        "start": "2020-12-01T00:00:00.000Z",
+        "end": "2021-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-13-el-3",
+        "title": "arcadian limner",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2021-11-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-13-el-4",
+        "title": "execrable scenographer",
+        "start": "2022-01-31T15:00:00.000Z",
+        "end": "2022-06-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-13-el-5",
+        "title": "munificent flatter",
+        "start": "2022-11-01T00:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-13-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "querulous senor",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "corpulent hot air balloon",
+            "start": "2020-12-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "inveterate panel beater",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "sartorial gnomes",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "gustatory exorcism",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-6",
+            "title": "arcadian artisan",
+            "start": "2022-10-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-13-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "friable soaper",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "feckless scenographer",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "crapulous designer",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "voracious clerk of the chapel",
+            "start": "2022-10-01T00:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-13-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "trenchant trampoline",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "didactic cookies",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "voracious dragons",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "fastidious ukulele",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-5",
+            "title": "fulsome jellybeans",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-13-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "irksome inker",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "querulous cupcake",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "guileless gnomes",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "bellicose praying mantis",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-5",
+            "title": "serpentine stick figures",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-13-5",
+        "title": "Subtrack 5",
+        "elements": [
+          {
+            "id": "t-5-el-1",
+            "title": "verdant stylist",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-2",
+            "title": "fastidious wheelwright",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2021-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-3",
+            "title": "crapulous snakes",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-5-el-4",
+            "title": "jejune stick figures",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-14",
+    "title": "Track 14",
+    "elements": [
+      {
+        "id": "t-14-el-1",
+        "title": "strident senor",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-14-el-2",
+        "title": "effulgent gnomes",
+        "start": "2020-12-31T15:00:00.000Z",
+        "end": "2021-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-14-el-3",
+        "title": "effulgent artisan",
+        "start": "2021-08-31T15:00:00.000Z",
+        "end": "2021-11-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-14-el-4",
+        "title": "jejune auto mechanic",
+        "start": "2022-02-28T15:00:00.000Z",
+        "end": "2022-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-14-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "dilatory teacher",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "puckish banjo",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "sartorial moldmaker",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "contumacious laser",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "egregious rainbows",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-15",
+    "title": "Track 15",
+    "elements": [
+      {
+        "id": "t-15-el-1",
+        "title": "loquacious carnival",
+        "start": "2019-12-31T15:00:00.000Z",
+        "end": "2020-04-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-15-el-2",
+        "title": "contumacious musician",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2021-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-15-el-3",
+        "title": "risible statue",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2022-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-15-el-4",
+        "title": "arcadian dolls",
+        "start": "2022-08-31T15:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FF005D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-15-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "strident bobbin boy",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "platitudinous soaper",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "friable mermaid eggs",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-15-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "minatory mechanic",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "cerulean beader",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "trenchant plant operator",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "corpulent ninja",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-15-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "jocular toilet",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "voracious inker",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "efficacious plant operator",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "hubristic auto mechanic",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-16",
+    "title": "Track 16",
+    "elements": [
+      {
+        "id": "t-16-el-1",
+        "title": "irksome producer",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-16-el-2",
+        "title": "mannered laser",
+        "start": "2020-04-30T15:00:00.000Z",
+        "end": "2020-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-16-el-3",
+        "title": "tenacious inker",
+        "start": "2021-02-28T15:00:00.000Z",
+        "end": "2021-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#579C87",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-16-el-4",
+        "title": "parsimonious designer",
+        "start": "2021-12-31T15:00:00.000Z",
+        "end": "2022-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FF005D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-16-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "didactic bobbin boy",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "petulant banjo",
+            "start": "2020-10-01T00:00:00.000Z",
+            "end": "2020-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "irksome captain",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "fastidious bunny",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "lachrymose senor",
+            "start": "2022-06-30T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-16-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "gustatory stylist",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "baleful inker",
+            "start": "2021-04-30T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "insolent limner",
+            "start": "2022-02-28T15:00:00.000Z",
+            "end": "2022-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-16-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "didactic maintenance engineering",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "rebarbative panel beater",
+            "start": "2021-03-31T15:00:00.000Z",
+            "end": "2021-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "obtuse animator",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "turgid praying mantis",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-16-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "rebarbative rainbows",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-08-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "quiescent cupcake",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "redolent cupcake",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "invidious laser",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-17",
+    "title": "Track 17",
+    "elements": [
+      {
+        "id": "t-17-el-1",
+        "title": "comely chair",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-17-el-2",
+        "title": "cerulean praying mantis",
+        "start": "2020-10-01T00:00:00.000Z",
+        "end": "2021-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-17-el-3",
+        "title": "munificent glitter",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2021-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-17-el-4",
+        "title": "mordant ninja",
+        "start": "2022-06-30T15:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-17-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "hubristic moldmaker",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "gustatory leadman",
+            "start": "2021-04-30T15:00:00.000Z",
+            "end": "2021-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "recalcitant sawfiler",
+            "start": "2021-11-01T00:00:00.000Z",
+            "end": "2022-04-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "salubrious artisan",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-17-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "voracious captain",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "nefarious glitter",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "sclerotic artist",
+            "start": "2021-04-30T15:00:00.000Z",
+            "end": "2021-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "garrulous bobbin boy",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-17-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "pendulous musician",
+            "start": "2019-12-31T15:00:00.000Z",
+            "end": "2020-02-29T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "nefarious inker",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2020-11-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "hubristic mechanic",
+            "start": "2021-05-31T15:00:00.000Z",
+            "end": "2022-01-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "redolent auto mechanic",
+            "start": "2022-07-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-18",
+    "title": "Track 18",
+    "elements": [
+      {
+        "id": "t-18-el-1",
+        "title": "antic pancake",
+        "start": "2020-02-29T15:00:00.000Z",
+        "end": "2020-04-30T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#0BB4C1",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-18-el-2",
+        "title": "comely designer",
+        "start": "2020-12-01T00:00:00.000Z",
+        "end": "2021-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-18-el-3",
+        "title": "egregious colorist",
+        "start": "2022-01-31T15:00:00.000Z",
+        "end": "2022-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-18-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "sagacious pancake",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "mannered hot air balloon",
+            "start": "2020-07-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "heuristic pancake",
+            "start": "2021-04-30T15:00:00.000Z",
+            "end": "2021-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "puckish glitter",
+            "start": "2021-06-30T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "voluble kazoo",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-19",
+    "title": "Track 19",
+    "elements": [
+      {
+        "id": "t-19-el-1",
+        "title": "insidious inker",
+        "start": "2020-01-31T15:00:00.000Z",
+        "end": "2020-05-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-19-el-2",
+        "title": "pernicious miller",
+        "start": "2020-05-31T15:00:00.000Z",
+        "end": "2021-01-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-19-el-3",
+        "title": "spasmodic chair",
+        "start": "2021-07-31T15:00:00.000Z",
+        "end": "2022-02-28T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-19-el-4",
+        "title": "platitudinous ninja",
+        "start": "2022-03-31T15:00:00.000Z",
+        "end": "2022-11-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#A1C181",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-19-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "amatory artisan",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "jocular unicorn",
+            "start": "2020-08-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "invidious apples",
+            "start": "2021-05-31T15:00:00.000Z",
+            "end": "2021-12-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "inveterate moldmaker",
+            "start": "2021-12-31T15:00:00.000Z",
+            "end": "2022-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-5",
+            "title": "corpulent beets",
+            "start": "2022-04-30T15:00:00.000Z",
+            "end": "2022-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-6",
+            "title": "propitious clerk of the chapel",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-19-2",
+        "title": "Subtrack 2",
+        "elements": [
+          {
+            "id": "t-2-el-1",
+            "title": "rhadamanthine laser",
+            "start": "2020-02-29T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-2",
+            "title": "boorish designer",
+            "start": "2020-12-31T15:00:00.000Z",
+            "end": "2021-02-28T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-3",
+            "title": "puckish clerk of the chapel",
+            "start": "2021-02-28T15:00:00.000Z",
+            "end": "2021-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-4",
+            "title": "concomitant kazoo",
+            "start": "2021-08-31T15:00:00.000Z",
+            "end": "2021-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-5",
+            "title": "friable flatter",
+            "start": "2022-03-31T15:00:00.000Z",
+            "end": "2022-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#233D4D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-2-el-6",
+            "title": "adroit senor",
+            "start": "2022-05-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FE7F2D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-19-3",
+        "title": "Subtrack 3",
+        "elements": [
+          {
+            "id": "t-3-el-1",
+            "title": "nefarious panel beater",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-10-01T00:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FCCA46",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-2",
+            "title": "antic panel beater",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#A1C181",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-3",
+            "title": "ruminative make-up artist",
+            "start": "2021-12-01T00:00:00.000Z",
+            "end": "2022-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-3-el-4",
+            "title": "meretricious exorcism",
+            "start": "2022-12-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      },
+      {
+        "id": "track-19-4",
+        "title": "Subtrack 4",
+        "elements": [
+          {
+            "id": "t-4-el-1",
+            "title": "turgid chair",
+            "start": "2020-03-31T15:00:00.000Z",
+            "end": "2020-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-2",
+            "title": "ubiquitous flatter",
+            "start": "2020-12-01T00:00:00.000Z",
+            "end": "2021-07-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-3",
+            "title": "baleful sea barnacles",
+            "start": "2022-01-31T15:00:00.000Z",
+            "end": "2022-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#00D49D",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-4-el-4",
+            "title": "dilatory director",
+            "start": "2022-10-01T00:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FEDF03",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  },
+  {
+    "id": "track-20",
+    "title": "Track 20",
+    "elements": [
+      {
+        "id": "t-20-el-1",
+        "title": "execrable coppersmith",
+        "start": "2019-12-31T15:00:00.000Z",
+        "end": "2020-07-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#00D49D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-20-el-2",
+        "title": "tenacious apples",
+        "start": "2020-12-01T00:00:00.000Z",
+        "end": "2021-03-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FEDF03",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-20-el-3",
+        "title": "fulsome auto mechanic",
+        "start": "2021-04-30T15:00:00.000Z",
+        "end": "2021-10-01T00:00:00.000Z",
+        "style": {
+          "backgroundColor": "#233D4D",
+          "color": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-20-el-4",
+        "title": "incendiary hot air balloon",
+        "start": "2021-11-01T00:00:00.000Z",
+        "end": "2022-01-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      },
+      {
+        "id": "t-20-el-5",
+        "title": "zealous snakes",
+        "start": "2022-07-31T15:00:00.000Z",
+        "end": "2022-12-31T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FCCA46",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-20-1",
+        "title": "Subtrack 1",
+        "elements": [
+          {
+            "id": "t-1-el-1",
+            "title": "rhadamanthine opera singer",
+            "start": "2020-01-31T15:00:00.000Z",
+            "end": "2020-06-30T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#579C87",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-2",
+            "title": "sagacious mermaid eggs",
+            "start": "2021-01-31T15:00:00.000Z",
+            "end": "2021-05-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#FF005D",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-3",
+            "title": "judicious colorist",
+            "start": "2021-07-31T15:00:00.000Z",
+            "end": "2022-03-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0085B6",
+              "color": "#ffffff",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          },
+          {
+            "id": "t-1-el-4",
+            "title": "serpentine pancake",
+            "start": "2022-08-31T15:00:00.000Z",
+            "end": "2022-12-31T15:00:00.000Z",
+            "style": {
+              "backgroundColor": "#0BB4C1",
+              "color": "#000000",
+              "borderRadius": "4px",
+              "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+              "textTransform": "capitalize"
+            }
+          }
+        ]
+      }
+    ],
+    "isOpen": false
+  }
+]

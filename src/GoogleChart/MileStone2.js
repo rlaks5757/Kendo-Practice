@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 
-const Milestone = () => {
+const Milestone2 = () => {
   const [BoxHeight, setBoxHeight] = useState(250);
 
   const currentYear = new Date().getFullYear();
@@ -12,92 +12,76 @@ const Milestone = () => {
   }, []);
 
   const dataarray = [
+    ["MileStone", "", new Date("04-01-2022"), new Date("04-01-2022")],
     [
-      "Plan",
-      "Hauling System",
-      // createCustomHTMLContent("sd"),
-      new Date("01-10-2021 00:00:00"),
-      new Date("02-02-2021 00:00:00"),
+      "교통영향평가",
+      "교평 제출 및 처리 통보",
+      new Date("04-05-2022 00:00:00"),
+      new Date("05-15-2022 00:00:00"),
     ],
     [
-      "Plan",
-      "PPWS Cable/Complaction",
-      new Date("02-02-2021 00:00:00"),
-      new Date("06-22-2021 00:00:00"),
-    ],
-    [
-      "Plan",
-      "Clamp & Hanger",
-      new Date("06-22-2021 00:00:00"),
-      new Date("07-20-2021 00:00:00"),
-    ],
-    [
-      "Plan",
-      "Deck Erection & Welding",
-      new Date("07-20-2021 00:00:00"),
-      new Date("12-19-2021 00:00:00"),
-    ],
-    [
-      "Plan",
-      "Pavement & others",
-      new Date("12-19-2021 00:00:00"),
-      new Date("01-17-2022 00:00:00"),
-    ],
-    [
-      "Plan",
-      "잔여공정/가시설 해체",
-      new Date("01-17-2022 00:00:00"),
-      new Date("06-17-2022 00:00:00"),
-    ],
-    [
-      "variance",
-      "",
-      new Date(currentYear - 1, 0, 1),
-      new Date(currentYear - 1, 0, 1),
+      "교통영향평가",
+      "본심의",
+
+      new Date("05-30-2022 00:00:00"),
+      new Date("07-15-2022 00:00:00"),
     ],
 
     [
-      "Actual",
-      "Hauling System",
-      new Date("01-15-2021 00:00:00"),
-      new Date("02-02-2021 00:00:00"),
+      "건축(Phase.1)",
+      "건축허가",
+      new Date("07-15-2022 00:00:00"),
+      new Date("08-30-2022 00:00:00"),
     ],
     [
-      "Actual",
-      "PPWS Cable/Complaction",
-      new Date("02-02-2021 00:00:00"),
-      new Date("07-18-2021 00:00:00"),
+      "건축(Phase.1)",
+      "건축착공신고",
+      new Date("10-15-2022 00:00:00"),
+      new Date("10-31-2022 00:00:00"),
     ],
     [
-      "Actual",
-      "Clamp & Hanger",
-      new Date("07-18-2021 00:00:00"),
-      new Date("07-30-2021 00:00:00"),
+      "건축(Phase.1)",
+      "건축사용신고",
+      new Date("05-01-2023 00:00:00"),
+      new Date("05-31-2023 00:00:00"),
     ],
     [
-      "Actual",
-      "Deck Erection & Welding",
-      new Date("07-30-2021 00:00:00"),
-      new Date("12-28-2021 00:00:00"),
+      "유해위험방지계획서",
+      "공작물축조신고",
+      new Date("06-15-2023 00:00:00"),
+      new Date("06-24-2023 00:00:00"),
     ],
     [
-      "Actual",
-      "Pavement & others",
-      new Date("12-28-2021 00:00:00"),
-      new Date("02-25-2022 00:00:00"),
+      "건축(Phase.2)",
+      "건축허가",
+      new Date("10-15-2022 00:00:00"),
+      new Date("11-30-2022 00:00:00"),
     ],
     [
-      "Actual",
-      "잔여공정/가시설 해체",
-      new Date("02-25-2022 00:00:00"),
-      new Date("07-24-2022 00:00:00"),
+      "건축(Phase.2)",
+      "건축착공신고",
+      new Date("01-15-2023 00:00:00"),
+      new Date("01-31-2023 00:00:00"),
+    ],
+    [
+      "건축(Phase.2)",
+      "건축사용신고",
+      new Date("08-01-2023 00:00:00"),
+      new Date("08-31-2023 00:00:00"),
+    ],
+    [
+      "환경인허가",
+      "대기배출신고",
+      new Date("06-01-2023 00:00:00"),
+      new Date("06-30-2023 00:00:00"),
+    ],
+    [
+      "환경인허가",
+      "가동개시신고",
+      new Date("10-31-2023 00:00:00"),
+      new Date("10-31-2023 00:00:00"),
     ],
   ];
-
-  // function createCustomHTMLContent(text) {
-  //   console.log(text);
-  //   return `<h3>${text}</h3>`;
-  // }
 
   const google = window.google;
 
@@ -112,19 +96,13 @@ const Milestone = () => {
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: "string", id: "Row" });
         dataTable.addColumn({ type: "string", id: "Bar" });
-        // dataTable.addColumn({
-        //   type: "string",
-        //   role: "tooltip",
-        //   p: { html: true },
-        // });
         dataTable.addColumn({ type: "date", id: "Start" });
         dataTable.addColumn({ type: "date", id: "End" });
         dataTable.addRows(dataarray);
 
         var dataTableGroup = google.visualization.data.group(dataTable, [0]);
-        var dateRangeStart = new Date(currentYear - 1, 0, 1);
-        var dateRangeStart = new Date(currentYear - 1, 0, 1);
-        var dateRangeEnd = new Date(2022, 8, 31);
+        var dateRangeStart = new Date("04-01-2022");
+        var dateRangeEnd = new Date("12-31-2023");
         var rowHeight = 55;
         var options = {
           height: dataTableGroup.getNumberOfRows() * rowHeight + rowHeight,
@@ -265,46 +243,6 @@ const Milestone = () => {
           });
         }
 
-        google.visualization.events.addListener(chart, "ready", function () {
-          addMarkers([
-            {
-              row: 0,
-              date: new Date("04-14-2017"),
-              name: "착공",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 1,
-              date: new Date("06-17-2022"),
-              name: "준공",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 1,
-              date: new Date("01-17-2022"),
-              name: "조기개통",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 11,
-              date: new Date("02-25-2022"),
-              name: "조기개통",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 11,
-              date: new Date("07-24-2022"),
-              name: "준공",
-              type: "circle",
-              color: "#CD212A",
-            },
-          ]);
-        });
-
         function addMarkers2(events) {
           var baseline;
           var baselineBounds;
@@ -416,27 +354,27 @@ const Milestone = () => {
           });
         }
 
-        google.visualization.events.addListener(chart, "ready", function () {
-          addMarkers2([
-            {
-              row: 6,
-              date: new Date("01-10-2021 00:00:00"),
-              date2: new Date("01-15-2021 00:00:00"),
-              type: "line",
-              name: "+5day",
-              color: "#CD212A",
-            },
-            {
-              row: 6,
-              date: new Date("06-22-2021 00:00:00"),
-              date2: new Date("07-18-2021 00:00:00"),
-              type: "line",
-              name:
-                dateDiff("06-22-2021 00:00:00", "07-18-2021 00:00:00") + "days",
-              color: "#CD212A",
-            },
-          ]);
-        });
+        // google.visualization.events.addListener(chart, "ready", function () {
+        //   addMarkers2([
+        //     {
+        //       row: 6,
+        //       date: new Date("01-10-2021 00:00:00"),
+        //       date2: new Date("01-15-2021 00:00:00"),
+        //       type: "line",
+        //       name: "+5day",
+        //       color: "#CD212A",
+        //     },
+        //     {
+        //       row: 6,
+        //       date: new Date("06-22-2021 00:00:00"),
+        //       date2: new Date("07-18-2021 00:00:00"),
+        //       type: "line",
+        //       name:
+        //         dateDiff("06-22-2021 00:00:00", "07-18-2021 00:00:00") + "days",
+        //       color: "#CD212A",
+        //     },
+        //   ]);
+        // });
 
         function addMarkers3(events) {
           var baseline;
@@ -552,7 +490,7 @@ const Milestone = () => {
         google.visualization.events.addListener(chart, "ready", function () {
           addMarkers3([
             {
-              row: 6,
+              row: 0,
               date: new Date(),
               type: "line",
               name: "Today",
@@ -612,6 +550,7 @@ const Milestone = () => {
             // find row label
             rowLabel = dataTable.getValue(event.row, 0);
             chartElements = container.getElementsByTagName("text");
+
             if (chartElements.length > 0) {
               Array.prototype.forEach.call(chartElements, function (label) {
                 if (label.textContent.indexOf("…") > -1) {
@@ -625,21 +564,30 @@ const Milestone = () => {
               });
             }
 
-            // calculate placement
             markerSpan = event.date.getTime() - dateRangeStart.getTime();
 
             yy = parseFloat(markerLabel.getAttribute("y"));
 
             // add label
-            markerLabel.setAttribute("text-anchor", "start");
+            markerLabel.setAttribute("text-anchor", "middle");
             markerLabel.setAttribute("fill", event.color);
+            markerLabel.setAttribute("width", 13);
             markerLabel.setAttribute(
               "x",
-              baselineBounds.x + timelineUnit * markerSpan + 7
+              baselineBounds.x + timelineUnit * markerSpan
             );
-            markerLabel.setAttribute("y", yy + 18);
+            markerLabel.setAttribute(
+              "y",
+              event.position === "down" ? yy + 18 : yy - 15
+            );
             markerLabel.setAttribute("font-size", 13);
+
+            let chartElementschild = container.getElementsByTagName("tspan");
+
+            markerLabel.append("tspan", event.name);
+
             markerLabel.textContent = event.name;
+
             svg.appendChild(markerLabel);
 
             // add marker
@@ -671,7 +619,10 @@ const Milestone = () => {
               case "circle":
                 marker = document.createElementNS(svgNS, "circle");
                 marker.setAttribute("cx", xCoord);
-                marker.setAttribute("cy", yCoord - 5);
+                marker.setAttribute(
+                  "cy",
+                  event.position === "down" ? yCoord - 22 : yCoord + 11
+                );
                 marker.setAttribute("r", "6");
                 marker.setAttribute("stroke", event.color);
                 marker.setAttribute("stroke-width", "3");
@@ -689,38 +640,91 @@ const Milestone = () => {
           addMarkers4([
             {
               row: 0,
-              date: new Date("04-14-2017"),
-              name: "착공",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 1,
-              date: new Date("06-17-2022"),
-              name: "준공",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 1,
-              date: new Date("01-17-2022"),
-              name: "조기개통",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 11,
-              date: new Date("02-25-2022"),
-              name: "조기개통",
-              type: "triangle",
-              color: "#CD212A",
-            },
-            {
-              row: 11,
-              date: new Date("07-24-2022"),
-              name: "준공",
+              date: new Date("05-02-2022"),
+              name: "선착수 공문 접수",
               type: "circle",
               color: "#CD212A",
+              position: "up",
+            },
+            {
+              row: 0,
+              date: new Date("05-27-2022"),
+              name: "교통영향평가 접수",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
+            },
+            {
+              row: 0,
+              date: new Date("07-25-2022"),
+              name: "착공",
+              type: "circle",
+              color: "#CD212A",
+              position: "up",
+            },
+            {
+              row: 0,
+              date: new Date("08-22-2022"),
+              name: "기초",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
+            },
+            {
+              row: 0,
+              date: new Date("09-14-2022"),
+              name: "골조",
+              type: "circle",
+              color: "#CD212A",
+              position: "up",
+            },
+            {
+              row: 0,
+              date: new Date("10-17-2022"),
+              name: "MEP",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
+            },
+            {
+              row: 0,
+              date: new Date("02-01-2023"),
+              name: "E/V",
+              type: "circle",
+              color: "#CD212A",
+              position: "up",
+            },
+            {
+              row: 0,
+              date: new Date("02-28-2023"),
+              name: "생산장비 반입",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
+            },
+            {
+              row: 0,
+              date: new Date("05-31-2023"),
+              name: "준공(제2연구동)",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
+            },
+            {
+              row: 0,
+              date: new Date("08-31-2023"),
+              name: "준공(제2충방전등)",
+              type: "circle",
+              color: "#CD212A",
+              position: "up",
+            },
+            {
+              row: 0,
+              date: new Date("11-30-2023"),
+              name: "준공(Phase2)",
+              type: "circle",
+              color: "#CD212A",
+              position: "down",
             },
           ]);
         });
@@ -751,4 +755,4 @@ const Milestone = () => {
   return <div id="timeline" style={{ marginTop: (BoxHeight - 170) / 2 }}></div>;
 };
 
-export default Milestone;
+export default Milestone2;
