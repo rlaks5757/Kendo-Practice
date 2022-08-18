@@ -91,6 +91,7 @@ const pageViews = [
     date: new Date(2020, 3, 30),
   },
 ];
+
 const visitors = [
   {
     value: 70,
@@ -101,4 +102,5 @@ const visitors = [
     type: "Returning",
   },
 ];
+
 export { conversions, channelUsers, pageViews, visitors };

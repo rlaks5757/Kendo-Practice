@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Chart,
   ChartLegend,
@@ -6,11 +6,17 @@ import {
   ChartSeriesItem,
 } from "@progress/kendo-react-charts";
 
-const VisitorsDonut = ({ data }) => {
+const VisitorsDonut = ({ data, positionData }) => {
+  const [chartHeight, setChartHeight] = useState(176);
+
+  useEffect(() => {
+    setChartHeight(176 + (positionData.rowSpan - 1) * 265);
+  }, [positionData]);
+
   return (
     <Chart
       style={{
-        height: "100%",
+        height: chartHeight,
       }}
     >
       <ChartSeries>

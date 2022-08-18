@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Chart,
   ChartArea,
@@ -10,7 +10,8 @@ import {
   ChartValueAxisItem,
 } from "@progress/kendo-react-charts";
 
-const PopularPagesChart = () => {
+const PopularPagesChart = ({ positionData }) => {
+  const [chartHeight, setChartHeight] = useState(176);
   const pages = ["Home", "Price", "Sign-up", "Product", "Blog"];
   const visits = [
     {
@@ -18,10 +19,14 @@ const PopularPagesChart = () => {
       visits: [80000, 60000, 30000, 20000, 2000],
     },
   ];
+
+  useEffect(() => {
+    setChartHeight(176 + (positionData.rowSpan - 1) * 265);
+  }, [positionData]);
   return (
     <Chart
       style={{
-        height: "100%",
+        height: chartHeight,
       }}
     >
       <ChartCategoryAxis>
