@@ -61,7 +61,6 @@ const OrgChart = () => {
           },
         ],
       },
-
       {
         id: 10,
         name: "손교식",

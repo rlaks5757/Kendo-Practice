@@ -4,20 +4,28 @@ import Timeline from "react-timelines";
 import "react-timelines/lib/css/style.css";
 import "./ReactTimeLine.scss";
 import moment from "moment";
+import axios from "axios";
+import { Dialog } from "@progress/kendo-react-dialogs";
 
 const now = new Date();
-
-const clickElement = (element) =>
-  alert(`Clicked element\n${JSON.stringify(element, null, 2)}`);
 
 const MIN_ZOOM = 0;
 const MAX_ZOOM = 20;
 
 const ReactTimeLine2 = () => {
-  const [timeBar, setTimeBar] = useState([]);
   const params = useParams();
 
+  const [timeBar, setTimeBar] = useState([]);
   const [option, setOption] = useState({});
+  const [start, setStart] = useState(new Date());
+  const [end, setEnd] = useState(new Date());
+  const [toggleDialog, setToggleDiaglog] = useState(false);
+  const [dialogContents, setDialogContents] = useState({});
+
+  const clickElement = (element) => {
+    handleDialog();
+    setDialogContents(element);
+  };
 
   const handleToggleOpen = () => {
     setOption((prev) => {
@@ -54,15 +62,64 @@ const ReactTimeLine2 = () => {
     });
   };
 
-  const start = new Date("2022-01-01");
-  const end = new Date("2023-12-31");
-
   useEffect(() => {
-    setOption({
-      open: false,
-      zoom: 0,
-      tracks: data,
-    });
+    const axiosData = async () => {
+      const unifierData = await axios.get(
+        `http://localhost:8080/timeLine/${params.id}`
+      );
+
+      const unifierDataResult = await unifierData.data.data.data;
+
+      const timeLineDataBase = unifierDataResult.map((com, idx) => {
+        return {
+          id: `track-${idx + 2}`,
+          title: com.d_permit_related_law,
+          elements: com._bp_lineitems
+            .filter((com1) => com1.KeyMilestone_srb === "Yes")
+            .map((com2, idx2) => {
+              return {
+                id: `t-${idx + 2}-el-${idx2 + 1}`,
+                title: com2.d_permit_name,
+                start: new Date(com2.PlanSubmissionDate),
+                end:
+                  com2.PlanSubmissionDate === com2.PlanObtainedDate
+                    ? new Date(
+                        `${com2.PlanObtainedDate.slice(0, 10)} 23:00:00
+                      `
+                      )
+                    : new Date(com2.PlanObtainedDate),
+                style: {
+                  backgroundColor: "#FE7F2D",
+                  color: "#000000",
+                  borderRadius: "4px",
+                  boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+                  textTransform: "capitalize",
+                },
+                d_permit_process_due: com2.d_permit_process_due,
+                d_permit_related_agency: com2.d_permit_related_agency,
+                d_permit_lead_company: com2.d_permit_lead_company,
+              };
+            }),
+        };
+      });
+
+      console.log(unifierDataResult);
+
+      const timeLineDataResult = timeLineDataBase.filter(
+        (com) => com.elements.length > 0
+      );
+
+      setOption({
+        open: false,
+        zoom: 0,
+        tracks: [...data, ...timeLineDataResult],
+      });
+
+      setStart(new Date("2022-01-01"));
+      setEnd(new Date("2023-12-31"));
+    };
+
+    axiosData();
   }, [params.id]);
 
   useEffect(() => {
@@ -131,9 +188,9 @@ const ReactTimeLine2 = () => {
 
     const QUARTERS_PER_YEAR = 4;
     const MONTHS_PER_QUARTER = 3;
-    const NUM_OF_YEARS = 2;
+    const NUM_OF_YEARS = end.getFullYear() - start.getFullYear() + 1;
     const MONTHS_PER_YEAR = 12;
-    const START_YEAR = 2022;
+    const START_YEAR = start.getFullYear();
 
     const addMonthsToYear = (year, monthsToAdd) => {
       let y = year;
@@ -200,7 +257,11 @@ const ReactTimeLine2 = () => {
     ];
 
     setTimeBar(buildTimebar1());
-  }, []);
+  }, [end, start]);
+
+  const handleDialog = () => {
+    setToggleDiaglog((prev) => !prev);
+  };
 
   return (
     <div className="app">
@@ -210,14 +271,15 @@ const ReactTimeLine2 = () => {
           scale={{
             start,
             end,
-            // zoom: option.zoom,
-            // zoomMin: MIN_ZOOM,
-            // zoomMax: MAX_ZOOM,
+            zoom: option.zoom,
+            zoomMin: MIN_ZOOM,
+            zoomMax: MAX_ZOOM,
           }}
           isOpen={option.open}
           toggleOpen={handleToggleOpen}
-          // zoomIn={handleZoomIn}
-          // zoomOut={handleZoomOut}
+          toggleTrackOpen={handleToggleTrackOpen}
+          zoomIn={handleZoomIn}
+          zoomOut={handleZoomOut}
           clickElement={clickElement}
           // clickTrackButton={(track) => {
           //   // eslint-disable-next-line no-alert
@@ -226,10 +288,23 @@ const ReactTimeLine2 = () => {
           timebar={timeBar}
           tracks={option.tracks}
           now={now}
-          toggleTrackOpen={handleToggleTrackOpen}
-          // enableSticky
+          enableSticky={false}
           // scrollToNow
         />
+      )}
+      {toggleDialog && (
+        <Dialog title={" "} onClose={handleDialog}>
+          <p>{dialogContents.title}</p>
+          <p>
+            시작일: {moment(new Date(dialogContents.start)).format("YY-MM-DD")}
+          </p>
+          <p>
+            종료일: {moment(new Date(dialogContents.end)).format("YY-MM-DD")}
+          </p>
+          <p>기간: {dialogContents.d_permit_process_due}</p>
+          <p>주관사: {dialogContents.d_permit_lead_company}</p>
+          <p>관할: {dialogContents.d_permit_related_agency}</p>
+        </Dialog>
       )}
     </div>
   );
@@ -398,164 +473,164 @@ const data = [
       },
     ],
   },
-  {
-    id: "track-2",
-    title: "교통영향평가",
-    elements: [
-      {
-        id: "t-1-el-1",
-        title: "교평 제출 및 처리통보",
-        start: new Date("04-05-2022 00:00:00"),
-        end: new Date("05-15-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "t-1-el-2",
-        title: "본심의",
-        start: new Date("05-30-2022 00:00:00"),
-        end: new Date("07-15-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-3",
-    title: "건축(Phase.1)",
-    elements: [
-      {
-        id: "0",
-        title: "건축허가",
-        start: new Date("07-15-2022 00:00:00"),
-        end: new Date("08-30-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "1",
-        title: "건축착공신고",
-        start: new Date("10-15-2022 00:00:00"),
-        end: new Date("10-31-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "2",
-        title: "건축사용신고",
-        start: new Date("05-01-2023 00:00:00"),
-        end: new Date("05-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-4",
-    title: "유해위험방지계획서",
-    elements: [
-      {
-        id: "0",
-        title: "공작물축조신고",
-        start: new Date("06-15-2023 00:00:00"),
-        end: new Date("06-24-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-5",
-    title: "건축(Phase.2)",
-    elements: [
-      {
-        id: "0",
-        title: "건축허가",
-        start: new Date("10-15-2022 00:00:00"),
-        end: new Date("11-30-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "1",
-        title: "건축착공신고",
-        start: new Date("01-15-2023 00:00:00"),
-        end: new Date("01-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "2",
-        title: "건축사용신고",
-        start: new Date("08-01-2023 00:00:00"),
-        end: new Date("08-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-6",
-    title: "환경인허가",
-    elements: [
-      {
-        id: "0",
-        title: "가동개시신고",
-        start: new Date("10-31-2023 00:00:00"),
-        end: new Date("10-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
+  // {
+  //   id: "track-2",
+  //   title: "교통영향평가",
+  //   elements: [
+  //     {
+  //       id: "t-1-el-1",
+  //       title: "교평 제출 및 처리통보",
+  //       start: new Date("04-05-2022 00:00:00"),
+  //       end: new Date("05-15-2022 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FE7F2D",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //     {
+  //       id: "t-1-el-2",
+  //       title: "본심의",
+  //       start: new Date("05-30-2022 00:00:00"),
+  //       end: new Date("07-15-2022 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FCCA46",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "track-3",
+  //   title: "건축(Phase.1)",
+  //   elements: [
+  //     {
+  //       id: "0",
+  //       title: "건축허가",
+  //       start: new Date("07-15-2022 00:00:00"),
+  //       end: new Date("08-30-2022 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FE7F2D",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //     {
+  //       id: "1",
+  //       title: "건축착공신고",
+  //       start: new Date("10-15-2022 00:00:00"),
+  //       end: new Date("10-31-2022 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FCCA46",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //     {
+  //       id: "2",
+  //       title: "건축사용신고",
+  //       start: new Date("05-01-2023 00:00:00"),
+  //       end: new Date("05-31-2023 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FCCA46",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "track-4",
+  //   title: "유해위험방지계획서",
+  //   elements: [
+  //     {
+  //       id: "0",
+  //       title: "공작물축조신고",
+  //       start: new Date("06-15-2023 00:00:00"),
+  //       end: new Date("06-24-2023 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FE7F2D",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "track-5",
+  //   title: "건축(Phase.2)",
+  //   elements: [
+  //     {
+  //       id: "0",
+  //       title: "건축허가",
+  //       start: new Date("10-15-2022 00:00:00"),
+  //       end: new Date("11-30-2022 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FE7F2D",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //     {
+  //       id: "1",
+  //       title: "건축착공신고",
+  //       start: new Date("01-15-2023 00:00:00"),
+  //       end: new Date("01-31-2023 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FCCA46",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //     {
+  //       id: "2",
+  //       title: "건축사용신고",
+  //       start: new Date("08-01-2023 00:00:00"),
+  //       end: new Date("08-31-2023 00:00:00"),
+  //       style: {
+  //         backgroundColor: "#FCCA46",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "track-6",
+  //   title: "환경인허가",
+  //   elements: [
+  //     {
+  //       id: "0",
+  //       title: "가동개시신고",
+  //       start: new Date("10-31-2023 00:00:00"),
+  //       end: new Date("10-31-2023 23:00:00"),
+  //       style: {
+  //         backgroundColor: "#FE7F2D",
+  //         color: "#000000",
+  //         borderRadius: "4px",
+  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+  //         textTransform: "capitalize",
+  //       },
+  //     },
+  //   ],
+  // },
 ];

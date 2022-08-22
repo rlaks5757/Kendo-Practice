@@ -12,6 +12,7 @@
 
 .rt-track__element {
   top: 30px;
+  min-width: 20px;
 }
 
 .rt-element__content.milestone {
@@ -30,4 +31,8 @@
 
 .rt-element__title2 {
   height: 25px;
+}
+
+.rt-element__tooltip {
+  z-index: 100000;
 }
