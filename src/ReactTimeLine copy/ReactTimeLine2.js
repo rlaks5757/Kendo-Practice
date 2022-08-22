@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
-import "react-timelines/lib/css/style.css";
-import "./ReactTimeLine.scss";
+import { Dialog } from "@progress/kendo-react-dialogs";
 import moment from "moment";
 import axios from "axios";
-import { Dialog } from "@progress/kendo-react-dialogs";
+import Url from "../url";
+import "react-timelines/lib/css/style.css";
+import "./ReactTimeLine2.scss";
 
 const now = new Date();
 
@@ -64,9 +65,7 @@ const ReactTimeLine2 = () => {
 
   useEffect(() => {
     const axiosData = async () => {
-      const unifierData = await axios.get(
-        `http://localhost:8080/timeLine/${params.id}`
-      );
+      const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
 
       const unifierDataResult = await unifierData.data.data.data;
 
@@ -103,8 +102,6 @@ const ReactTimeLine2 = () => {
         };
       });
 
-      console.log(unifierDataResult);
-
       const timeLineDataResult = timeLineDataBase.filter(
         (com) => com.elements.length > 0
       );
@@ -115,8 +112,80 @@ const ReactTimeLine2 = () => {
         tracks: [...data, ...timeLineDataResult],
       });
 
-      setStart(new Date("2022-01-01"));
-      setEnd(new Date("2023-12-31"));
+      //Start & End Date Setting
+      const startEndDateArr = [];
+
+      timeLineDataResult.forEach((com) => {
+        com.elements.forEach((com2) => {
+          startEndDateArr.push(com2.start);
+          startEndDateArr.push(com2.end);
+        });
+      });
+
+      const startEndDateSorting = startEndDateArr.sort(function (a, b) {
+        a = new Date(a.dateModified);
+        b = new Date(b.dateModified);
+        return a > b ? -1 : a < b ? 1 : 0;
+      });
+
+      const startDate = startEndDateSorting[0];
+      const endDate = startEndDateSorting[startEndDateSorting.length - 1];
+
+      /**
+       * Start Date을 기준으로 시작 분기를 반환하는 함수
+       * @param {type: Date} StartDate
+       */
+      const settingStartDate = (date) => {
+        const targetDate = new Date(date);
+        targetDate.setDate(1);
+
+        const month = new Date(date).getMonth();
+
+        if (month === 0 && month <= 2) {
+          targetDate.setMonth(0);
+        } else if (month > 2 && month <= 5) {
+          targetDate.setMonth(3);
+        } else if (month > 5 && month <= 8) {
+          targetDate.setMonth(6);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setMonth(9);
+        }
+
+        setStart(new Date(targetDate));
+      };
+
+      /**
+       * End Date을 기준으로 종료 분기를 반환하는 함수
+       * @param {type: Date} EndDate
+       */
+      const settingEndDate = (date) => {
+        const targetDate = new Date(date);
+
+        const month = new Date(date).getMonth();
+
+        if (month === 0 && month <= 2) {
+          targetDate.setMonth(2);
+        } else if (month > 2 && month <= 5) {
+          targetDate.setMonth(5);
+        } else if (month > 5 && month <= 8) {
+          targetDate.setMonth(8);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setMonth(11);
+        }
+
+        const lastDay = new Date(
+          targetDate.getFullYear(),
+          targetDate.getMonth(),
+          0
+        ).getDate();
+
+        targetDate.setDate(lastDay);
+
+        setEnd(new Date(targetDate));
+      };
+
+      settingStartDate(startDate);
+      settingEndDate(endDate);
     };
 
     axiosData();

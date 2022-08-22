@@ -24,3 +24,6 @@ yarn-error.log*
 
 /src/TestTable
 /src/Practice
+
+
+/src/url.js
