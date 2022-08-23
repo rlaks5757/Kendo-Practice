@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
-import { Dialog } from "@progress/kendo-react-dialogs";
 import moment from "moment";
 import axios from "axios";
+import DialogComponent from "./DialogComponent";
 import Url from "../url";
 import "react-timelines/lib/css/style.css";
 import "./ReactTimeLine2.scss";
@@ -22,6 +22,10 @@ const ReactTimeLine2 = () => {
   const [end, setEnd] = useState(new Date());
   const [toggleDialog, setToggleDiaglog] = useState(false);
   const [dialogContents, setDialogContents] = useState({});
+  const [projectStartEnd, setProjectStartEnd] = useState({
+    start: "",
+    end: "",
+  });
 
   const clickElement = (element) => {
     handleDialog();
@@ -46,28 +50,13 @@ const ReactTimeLine2 = () => {
     });
   };
 
-  const handleToggleTrackOpen = (track) => {
-    setOption((state) => {
-      const tracksById = {
-        ...state.tracksById,
-        [track.id]: {
-          ...track,
-          isOpen: !track.isOpen,
-        },
-      };
-
-      return {
-        tracksById,
-        tracks: data,
-      };
-    });
-  };
-
   useEffect(() => {
     const axiosData = async () => {
       const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
 
-      const unifierDataResult = await unifierData.data.data.data;
+      const unifierDataResult = await unifierData.data.data1.data;
+
+      const unifierDataResult2 = await unifierData.data.data2.data;
 
       const timeLineDataBase = unifierDataResult.map((com, idx) => {
         return {
@@ -106,14 +95,42 @@ const ReactTimeLine2 = () => {
         (com) => com.elements.length > 0
       );
 
+      const milestoneData = {
+        id: "track-1",
+        title: "MileStone",
+        elements: unifierDataResult2.map((com, idx) => {
+          return {
+            id: idx,
+            title: com.genMilestoneDesc,
+            start: new Date(com.plan_date),
+            end: new Date(
+              `${com.plan_date.slice(0, 10)} 23:00:00
+            `
+            ),
+            style: {
+              backgroundColor: "transparent",
+              color: "#000000",
+              borderRadius: "4px",
+              textTransform: "capitalize",
+              textAlign: "center",
+            },
+            position: idx % 2 === 0 ? "up" : "down",
+          };
+        }),
+      };
+
       setOption({
         open: false,
         zoom: 0,
-        tracks: [...data, ...timeLineDataResult],
+        tracks: [milestoneData, ...timeLineDataResult],
       });
 
       //Start & End Date Setting
       const startEndDateArr = [];
+
+      unifierDataResult2.forEach((com) => {
+        startEndDateArr.push(new Date(com.plan_date));
+      });
 
       timeLineDataResult.forEach((com) => {
         com.elements.forEach((com2) => {
@@ -122,18 +139,16 @@ const ReactTimeLine2 = () => {
         });
       });
 
-      const startEndDateSorting = startEndDateArr.sort(function (a, b) {
-        a = new Date(a.dateModified);
-        b = new Date(b.dateModified);
-        return a > b ? -1 : a < b ? 1 : 0;
-      });
+      const startEndDateSorting = startEndDateArr.sort(
+        (a, b) => new Date(a) - new Date(b)
+      );
 
       const startDate = startEndDateSorting[0];
       const endDate = startEndDateSorting[startEndDateSorting.length - 1];
 
       /**
        * Start Date을 기준으로 시작 분기를 반환하는 함수
-       * @param {type: Date} StartDate
+       * @param {Date} date
        */
       const settingStartDate = (date) => {
         const targetDate = new Date(date);
@@ -142,13 +157,14 @@ const ReactTimeLine2 = () => {
         const month = new Date(date).getMonth();
 
         if (month === 0 && month <= 2) {
-          targetDate.setMonth(0);
-        } else if (month > 2 && month <= 5) {
-          targetDate.setMonth(3);
-        } else if (month > 5 && month <= 8) {
-          targetDate.setMonth(6);
-        } else if (month > 8 && month <= 11) {
+          targetDate.setFullYear(targetDate.getFullYear() - 1);
           targetDate.setMonth(9);
+        } else if (month > 2 && month <= 5) {
+          targetDate.setMonth(0);
+        } else if (month > 5 && month <= 8) {
+          targetDate.setMonth(3);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setMonth(6);
         }
 
         setStart(new Date(targetDate));
@@ -156,7 +172,7 @@ const ReactTimeLine2 = () => {
 
       /**
        * End Date을 기준으로 종료 분기를 반환하는 함수
-       * @param {type: Date} EndDate
+       * @param {Date} date
        */
       const settingEndDate = (date) => {
         const targetDate = new Date(date);
@@ -164,13 +180,14 @@ const ReactTimeLine2 = () => {
         const month = new Date(date).getMonth();
 
         if (month === 0 && month <= 2) {
-          targetDate.setMonth(2);
-        } else if (month > 2 && month <= 5) {
           targetDate.setMonth(5);
-        } else if (month > 5 && month <= 8) {
+        } else if (month > 2 && month <= 5) {
           targetDate.setMonth(8);
-        } else if (month > 8 && month <= 11) {
+        } else if (month > 5 && month <= 8) {
           targetDate.setMonth(11);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setFullYear(targetDate.getFullYear() + 1);
+          targetDate.setMonth(2);
         }
 
         const lastDay = new Date(
@@ -186,6 +203,10 @@ const ReactTimeLine2 = () => {
 
       settingStartDate(startDate);
       settingEndDate(endDate);
+
+      setProjectStartEnd((prev) => {
+        return { ...prev, start: startDate, end: endDate };
+      });
     };
 
     axiosData();
@@ -202,16 +223,15 @@ const ReactTimeLine2 = () => {
           com.firstChild.firstChild.style.left = "-49px";
           com.firstChild.firstChild.style.fontSize = "13px";
 
-          const spans = document.createElement("div");
+          const spans = document.createElement("span");
           spans.className = "rt-element__title2";
-          spans.style.alignItems = "self-end";
-          spans.innerHTML = moment(data[0].elements[idx].start).format(
+          spans.innerHTML = moment(option.tracks[0].elements[idx].start).format(
             "MM-DD-YYYY"
           );
 
           com.firstChild.firstChild.appendChild(spans);
 
-          if (data[0].elements[idx].position === "up") {
+          if (option.tracks[0].elements[idx].position === "up") {
             com.firstChild.firstChild.style.top = "0px";
           } else {
             com.firstChild.firstChild.style.top = "15px";
@@ -227,7 +247,7 @@ const ReactTimeLine2 = () => {
 
           divs.appendChild(icons);
 
-          if (data[0].elements[idx].position === "up") {
+          if (option.tracks[0].elements[idx].position === "up") {
             com.style.top = "-5px";
             com.appendChild(divs);
           } else {
@@ -333,7 +353,7 @@ const ReactTimeLine2 = () => {
   };
 
   return (
-    <div className="app">
+    <div className="reactTimeLine">
       <h1 className="title">React Timelines</h1>
       {option.tracks !== undefined && (
         <Timeline
@@ -346,360 +366,24 @@ const ReactTimeLine2 = () => {
           }}
           isOpen={option.open}
           toggleOpen={handleToggleOpen}
-          toggleTrackOpen={handleToggleTrackOpen}
           zoomIn={handleZoomIn}
           zoomOut={handleZoomOut}
           clickElement={clickElement}
-          // clickTrackButton={(track) => {
-          //   // eslint-disable-next-line no-alert
-          //   alert(JSON.stringify(track));
-          // }}
           timebar={timeBar}
           tracks={option.tracks}
           now={now}
           enableSticky={false}
-          // scrollToNow
         />
       )}
       {toggleDialog && (
-        <Dialog title={" "} onClose={handleDialog}>
-          <p>{dialogContents.title}</p>
-          <p>
-            시작일: {moment(new Date(dialogContents.start)).format("YY-MM-DD")}
-          </p>
-          <p>
-            종료일: {moment(new Date(dialogContents.end)).format("YY-MM-DD")}
-          </p>
-          <p>기간: {dialogContents.d_permit_process_due}</p>
-          <p>주관사: {dialogContents.d_permit_lead_company}</p>
-          <p>관할: {dialogContents.d_permit_related_agency}</p>
-        </Dialog>
+        <DialogComponent
+          handleDialog={handleDialog}
+          dialogContents={dialogContents}
+          projectStartEnd={projectStartEnd}
+        ></DialogComponent>
       )}
     </div>
   );
 };
 
 export default ReactTimeLine2;
-
-const data = [
-  {
-    id: "track-1",
-    title: "MileStone",
-    elements: [
-      {
-        id: "0",
-        title: "선착수 공문 접수",
-        start: new Date("05-02-2022 00:00:00"),
-        end: new Date("05-02-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "1",
-        title: "교통영향평가 접수",
-        start: new Date("05-27-2022 00:00:00"),
-        end: new Date("05-27-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "2",
-        title: "착공",
-        start: new Date("07-25-2022 00:00:00"),
-        end: new Date("07-25-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "3",
-        title: "기초",
-        start: new Date("08-22-2022 00:00:00"),
-        end: new Date("08-22-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "4",
-        title: "골조",
-        start: new Date("09-14-2022 00:00:00"),
-        end: new Date("09-14-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "5",
-        title: "MEP",
-        start: new Date("10-17-2022 00:00:00"),
-        end: new Date("10-17-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "6",
-        title: "E/V",
-        start: new Date("01-02-2023 00:00:00"),
-        end: new Date("01-02-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "7",
-        title: "생산장비 반입",
-        start: new Date("02-28-2023 00:00:00"),
-        end: new Date("02-28-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "8",
-        title: "준공(제2연구동)",
-        start: new Date("05-31-2023 00:00:00"),
-        end: new Date("05-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "9",
-        title: "준공(제2충방전등)",
-        start: new Date("08-31-2023 00:00:00"),
-        end: new Date("08-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "10",
-        title: "준공(Phase2)",
-        start: new Date("11-30-2023 00:00:00"),
-        end: new Date("11-30-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-    ],
-  },
-  // {
-  //   id: "track-2",
-  //   title: "교통영향평가",
-  //   elements: [
-  //     {
-  //       id: "t-1-el-1",
-  //       title: "교평 제출 및 처리통보",
-  //       start: new Date("04-05-2022 00:00:00"),
-  //       end: new Date("05-15-2022 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FE7F2D",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //     {
-  //       id: "t-1-el-2",
-  //       title: "본심의",
-  //       start: new Date("05-30-2022 00:00:00"),
-  //       end: new Date("07-15-2022 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FCCA46",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "track-3",
-  //   title: "건축(Phase.1)",
-  //   elements: [
-  //     {
-  //       id: "0",
-  //       title: "건축허가",
-  //       start: new Date("07-15-2022 00:00:00"),
-  //       end: new Date("08-30-2022 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FE7F2D",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //     {
-  //       id: "1",
-  //       title: "건축착공신고",
-  //       start: new Date("10-15-2022 00:00:00"),
-  //       end: new Date("10-31-2022 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FCCA46",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //     {
-  //       id: "2",
-  //       title: "건축사용신고",
-  //       start: new Date("05-01-2023 00:00:00"),
-  //       end: new Date("05-31-2023 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FCCA46",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "track-4",
-  //   title: "유해위험방지계획서",
-  //   elements: [
-  //     {
-  //       id: "0",
-  //       title: "공작물축조신고",
-  //       start: new Date("06-15-2023 00:00:00"),
-  //       end: new Date("06-24-2023 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FE7F2D",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "track-5",
-  //   title: "건축(Phase.2)",
-  //   elements: [
-  //     {
-  //       id: "0",
-  //       title: "건축허가",
-  //       start: new Date("10-15-2022 00:00:00"),
-  //       end: new Date("11-30-2022 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FE7F2D",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //     {
-  //       id: "1",
-  //       title: "건축착공신고",
-  //       start: new Date("01-15-2023 00:00:00"),
-  //       end: new Date("01-31-2023 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FCCA46",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //     {
-  //       id: "2",
-  //       title: "건축사용신고",
-  //       start: new Date("08-01-2023 00:00:00"),
-  //       end: new Date("08-31-2023 00:00:00"),
-  //       style: {
-  //         backgroundColor: "#FCCA46",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "track-6",
-  //   title: "환경인허가",
-  //   elements: [
-  //     {
-  //       id: "0",
-  //       title: "가동개시신고",
-  //       start: new Date("10-31-2023 00:00:00"),
-  //       end: new Date("10-31-2023 23:00:00"),
-  //       style: {
-  //         backgroundColor: "#FE7F2D",
-  //         color: "#000000",
-  //         borderRadius: "4px",
-  //         boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-  //         textTransform: "capitalize",
-  //       },
-  //     },
-  //   ],
-  // },
-];
