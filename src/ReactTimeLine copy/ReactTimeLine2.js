@@ -10,7 +10,7 @@ import "./ReactTimeLine2.scss";
 
 const now = new Date();
 
-const MIN_ZOOM = 0;
+const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
 
 const ReactTimeLine2 = () => {
@@ -23,40 +23,44 @@ const ReactTimeLine2 = () => {
   const [toggleDialog, setToggleDiaglog] = useState(false);
   const [dialogContents, setDialogContents] = useState({});
   const [projectStartEnd, setProjectStartEnd] = useState({
+    projectName: "",
     start: "",
     end: "",
   });
-
-  const clickElement = (element) => {
-    handleDialog();
-    setDialogContents(element);
-  };
-
-  const handleToggleOpen = () => {
-    setOption((prev) => {
-      return { ...prev, open: !prev.open };
-    });
-  };
-
-  const handleZoomIn = () => {
-    setOption((prev) => {
-      return { ...prev, zoom: Math.min(prev.zoom + 1, MAX_ZOOM) };
-    });
-  };
-
-  const handleZoomOut = () => {
-    setOption((prev) => {
-      return { ...prev, zoom: Math.max(prev.zoom - 1, MIN_ZOOM) };
-    });
-  };
 
   useEffect(() => {
     const axiosData = async () => {
       const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
 
-      const unifierDataResult = await unifierData.data.data1.data;
+      const unifierDataResult = await unifierData.data.data1;
 
-      const unifierDataResult2 = await unifierData.data.data2.data;
+      const unifierDataResult2 = await unifierData.data.data2;
+
+      const milestoneData = {
+        id: "track-1",
+        title: "MileStone",
+        elements: unifierDataResult2
+          .sort((a, b) => new Date(a.plan_date) - new Date(b.plan_date))
+          .map((com, idx) => {
+            return {
+              id: `t-1-el-${idx + 1}`,
+              title: com.genMilestoneDesc,
+              start: new Date(com.plan_date),
+              end: new Date(
+                `${com.plan_date.slice(0, 10)} 23:00:00
+            `
+              ),
+              style: {
+                backgroundColor: "transparent",
+                color: "#000000",
+                borderRadius: "4px",
+                textTransform: "capitalize",
+                textAlign: "center",
+              },
+              position: idx % 2 === 0 ? "up" : "down",
+            };
+          }),
+      };
 
       const timeLineDataBase = unifierDataResult.map((com, idx) => {
         return {
@@ -83,6 +87,7 @@ const ReactTimeLine2 = () => {
                   boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
                   textTransform: "capitalize",
                 },
+                d_permit_submit_when: com2.d_permit_submit_when,
                 d_permit_process_due: com2.d_permit_process_due,
                 d_permit_related_agency: com2.d_permit_related_agency,
                 d_permit_lead_company: com2.d_permit_lead_company,
@@ -95,33 +100,9 @@ const ReactTimeLine2 = () => {
         (com) => com.elements.length > 0
       );
 
-      const milestoneData = {
-        id: "track-1",
-        title: "MileStone",
-        elements: unifierDataResult2.map((com, idx) => {
-          return {
-            id: idx,
-            title: com.genMilestoneDesc,
-            start: new Date(com.plan_date),
-            end: new Date(
-              `${com.plan_date.slice(0, 10)} 23:00:00
-            `
-            ),
-            style: {
-              backgroundColor: "transparent",
-              color: "#000000",
-              borderRadius: "4px",
-              textTransform: "capitalize",
-              textAlign: "center",
-            },
-            position: idx % 2 === 0 ? "up" : "down",
-          };
-        }),
-      };
-
       setOption({
         open: false,
-        zoom: 0,
+        zoom: 1,
         tracks: [milestoneData, ...timeLineDataResult],
       });
 
@@ -147,8 +128,9 @@ const ReactTimeLine2 = () => {
       const endDate = startEndDateSorting[startEndDateSorting.length - 1];
 
       /**
-       * Start Date을 기준으로 시작 분기를 반환하는 함수
-       * @param {Date} date
+       * Start Date을 기준으로 1분기 전을 반환하는 함수
+       * @param {Date} date StartDate
+       * @returns
        */
       const settingStartDate = (date) => {
         const targetDate = new Date(date);
@@ -171,8 +153,9 @@ const ReactTimeLine2 = () => {
       };
 
       /**
-       * End Date을 기준으로 종료 분기를 반환하는 함수
-       * @param {Date} date
+       * End Date을 기준으로 1분기 후를 반환하는 함수
+       * @param {Date} date StartDate
+       * @returns
        */
       const settingEndDate = (date) => {
         const targetDate = new Date(date);
@@ -204,9 +187,13 @@ const ReactTimeLine2 = () => {
       settingStartDate(startDate);
       settingEndDate(endDate);
 
-      setProjectStartEnd((prev) => {
-        return { ...prev, start: startDate, end: endDate };
-      });
+      if (unifierDataResult2.length > 0) {
+        const projectName = unifierDataResult2[0].project_projectname;
+
+        setProjectStartEnd((prev) => {
+          return { ...prev, projectName, start: startDate, end: endDate };
+        });
+      }
     };
 
     axiosData();
@@ -347,6 +334,29 @@ const ReactTimeLine2 = () => {
 
     setTimeBar(buildTimebar1());
   }, [end, start]);
+
+  const clickElement = (element) => {
+    handleDialog();
+    setDialogContents(element);
+  };
+
+  const handleToggleOpen = () => {
+    setOption((prev) => {
+      return { ...prev, open: !prev.open };
+    });
+  };
+
+  const handleZoomIn = () => {
+    setOption((prev) => {
+      return { ...prev, zoom: Math.min(prev.zoom + 1, MAX_ZOOM) };
+    });
+  };
+
+  const handleZoomOut = () => {
+    setOption((prev) => {
+      return { ...prev, zoom: Math.max(prev.zoom - 1, MIN_ZOOM) };
+    });
+  };
 
   const handleDialog = () => {
     setToggleDiaglog((prev) => !prev);
