@@ -32,8 +32,14 @@ const ReactTimeLine2 = () => {
     const axiosData = async () => {
       const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
 
+      /**
+       * Requset Premit Data
+       */
       const unifierDataResult = await unifierData.data.data1;
 
+      /**
+       * Requset Milestone Data
+       */
       const unifierDataResult2 = await unifierData.data.data2;
 
       const milestoneData = {
@@ -92,6 +98,15 @@ const ReactTimeLine2 = () => {
                 d_permit_related_agency: com2.d_permit_related_agency,
                 d_permit_lead_company: com2.d_permit_lead_company,
               };
+            })
+            .sort((a, b) => {
+              if (a.start > b.start) {
+                return 1;
+              }
+              if (a.start < b.start) {
+                return -1;
+              }
+              return 0;
             }),
         };
       });
@@ -99,6 +114,16 @@ const ReactTimeLine2 = () => {
       const timeLineDataResult = timeLineDataBase.filter(
         (com) => com.elements.length > 0
       );
+
+      timeLineDataResult.sort((a, b) => {
+        if (a.elements[0].start > b.elements[0].start) {
+          return 1;
+        }
+        if (a.elements[0].start < b.elements[0].start) {
+          return -1;
+        }
+        return 0;
+      });
 
       setOption({
         open: false,
@@ -201,50 +226,115 @@ const ReactTimeLine2 = () => {
 
   useEffect(() => {
     const timeLine = document.querySelector(".rt-tracks");
+
     if (timeLine !== null) {
       timeLine.firstChild.firstChild.childNodes.forEach((com, idx) => {
-        if (com.firstChild.firstChild.className === "rt-element__content") {
-          com.firstChild.firstChild.className = "rt-element__content milestone";
-          com.firstChild.firstChild.style.width = "100px";
-          com.firstChild.firstChild.style.position = "absolute";
-          com.firstChild.firstChild.style.left = "-49px";
-          com.firstChild.firstChild.style.fontSize = "13px";
+        const spans = document.createElement("span");
+        spans.className = "rt-element__title2";
+        spans.innerHTML = moment(option.tracks[0].elements[idx].start).format(
+          "MM-DD-YYYY"
+        );
 
-          const spans = document.createElement("span");
-          spans.className = "rt-element__title2";
-          spans.innerHTML = moment(option.tracks[0].elements[idx].start).format(
-            "MM-DD-YYYY"
-          );
+        const divs = document.createElement("div");
+        divs.style.width = "100%";
+        divs.style.position = "absolute";
+        divs.style.left = "-14px";
 
-          com.firstChild.firstChild.appendChild(spans);
+        const icons = document.createElement("span");
+        icons.className = "k-icon k-i-circle";
 
-          if (option.tracks[0].elements[idx].position === "up") {
-            com.firstChild.firstChild.style.top = "0px";
+        if (option.tracks[0].elements[idx].position === "up") {
+        } else {
+        }
+
+        if (option.tracks[0].elements[idx].position === "up") {
+          const changeWidthNode = com.firstChild.firstChild;
+          if (changeWidthNode.className.includes("milestone")) {
           } else {
-            com.firstChild.firstChild.style.top = "15px";
-          }
+            com.firstChild.firstChild.style.top = "0px";
 
-          const divs = document.createElement("div");
-          divs.style.width = "100%";
-          divs.style.position = "absolute";
-          divs.style.left = "-14px";
+            com.firstChild.firstChild.className =
+              "rt-element__content milestone";
+            com.firstChild.firstChild.style.position = "absolute";
+            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.width = "100px";
+            com.firstChild.firstChild.style.left = "-50px";
 
-          const icons = document.createElement("span");
-          icons.className = "k-icon k-i-circle";
+            com.firstChild.firstChild.appendChild(spans);
 
-          divs.appendChild(icons);
+            divs.appendChild(icons);
 
-          if (option.tracks[0].elements[idx].position === "up") {
             com.style.top = "-5px";
             com.appendChild(divs);
+          }
+        } else {
+          const changeWidthNode = com.lastChild.firstChild;
+
+          if (changeWidthNode.className.includes("milestone")) {
           } else {
+            com.firstChild.firstChild.style.top = "15px";
+
+            console.log(changeWidthNode);
+
+            com.firstChild.firstChild.className =
+              "rt-element__content milestone";
+            com.firstChild.firstChild.style.position = "absolute";
+            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.width = "100px";
+            com.firstChild.firstChild.style.left = "-50px";
+
+            com.firstChild.firstChild.appendChild(spans);
+
+            divs.appendChild(icons);
+
             com.style.top = "35px";
             com.prepend(divs);
           }
         }
       });
     }
-  }, [option.tracks]);
+  }, [option.tracks, option.zoom]);
+
+  useEffect(() => {
+    const tracksElement = document.querySelector(".rt-tracks");
+
+    if (tracksElement !== null) {
+      const tracksNodes = tracksElement.childNodes;
+
+      tracksNodes.forEach((com, idx) => {
+        if (idx !== 0) {
+          const targetChildNodes = com.firstChild.childNodes;
+          targetChildNodes.forEach((com2, idx2) => {
+            const spans = document.createElement("span");
+            spans.className = "rt-element__title3";
+
+            // if (option.tracks[idx].elements[idx2].title.length > 8) {
+            //   spans.innerHTML =
+            //     option.tracks[idx].elements[idx2].title.slice(0, 8) + "...";
+            // } else {
+            //   spans.innerHTML = option.tracks[idx].elements[idx2].title;
+            // }
+            spans.innerHTML = option.tracks[idx].elements[idx2].title;
+
+            com2.firstChild.firstChild.firstChild.style.display = "none";
+            if (idx2 % 2 === 0) {
+              spans.style.top = "-20px";
+            } else {
+              spans.style.top = "45px";
+            }
+
+            if (com2.childNodes.length === 1) {
+              com2.appendChild(spans);
+              spans.style.width = 100 + "px";
+            } else {
+              com2.childNodes[1].style.width =
+                100 + (option.zoom - 1) * 50 + "px";
+            }
+          });
+        }
+      });
+    }
+  }, [option.tracks, option.zoom]);
 
   useEffect(() => {
     const MONTH_NAMES = [
@@ -364,7 +454,7 @@ const ReactTimeLine2 = () => {
 
   return (
     <div className="reactTimeLine">
-      <h1 className="title">React Timelines</h1>
+      {/* <h1 className="title">React Timelines</h1> */}
       {option.tracks !== undefined && (
         <Timeline
           scale={{

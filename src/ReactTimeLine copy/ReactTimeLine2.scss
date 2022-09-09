@@ -49,3 +49,16 @@
 .k-window-content.k-dialog-content {
   min-width: 300px;
 }
+
+.rt-element__tooltip {
+  display: none;
+}
+
+.rt-element__title3 {
+  font-size: 0.8rem;
+  position: absolute;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
