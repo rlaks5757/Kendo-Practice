@@ -250,6 +250,8 @@ const ReactTimeLine2 = () => {
         if (option.tracks[0].elements[idx].position === "up") {
           const changeWidthNode = com.firstChild.firstChild;
           if (changeWidthNode.className.includes("milestone")) {
+            changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
+            changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
             com.firstChild.firstChild.style.top = "0px";
 
@@ -271,10 +273,10 @@ const ReactTimeLine2 = () => {
           const changeWidthNode = com.lastChild.firstChild;
 
           if (changeWidthNode.className.includes("milestone")) {
+            changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
+            changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
             com.firstChild.firstChild.style.top = "15px";
-
-            console.log(changeWidthNode);
 
             com.firstChild.firstChild.className =
               "rt-element__content milestone";
