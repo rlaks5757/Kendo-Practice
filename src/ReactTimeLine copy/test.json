@@ -1,0 +1,111 @@
+[
+  {
+    "id": "track-2",
+    "title": "지하안전관리에 관한 특별법",
+    "elements": [
+      {
+        "id": "t-2-el-1",
+        "title": "1. 지하안전영향평가 (소규모, 지하굴착 10M 이상 20M이하)",
+        "start": "2022-05-01T15:00:00.000Z",
+        "end": "2022-05-12T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        },
+        "d_permit_submit_when": "건축허가 전",
+        "d_permit_process_due": "50일",
+        "d_permit_related_agency": "시청",
+        "d_permit_lead_company": "SK건설"
+      }
+    ]
+  },
+  {
+    "id": "track-3",
+    "title": "위험물 안전 관리법",
+    "elements": [
+      {
+        "id": "t-3-el-1",
+        "title": "1. 위험물 일반취급소 설치허가",
+        "start": "2022-07-31T15:00:00.000Z",
+        "end": "2022-08-04T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        },
+        "d_permit_submit_when": "관련시설 설치 전",
+        "d_permit_process_due": "5일",
+        "d_permit_related_agency": "소방서",
+        "d_permit_lead_company": "SK하이닉스"
+      }
+    ]
+  },
+  {
+    "id": "track-7",
+    "title": "국토의 계획 및 이용에 관한 법률",
+    "elements": [
+      {
+        "id": "t-7-el-1",
+        "title": "1. 도시군계획시설의 결정 구조 및 설치기준에 관한 규칙\n   - 가스공급시설 설비 저장 30톤 이상, 압축가스 3천M3 이상",
+        "start": "2022-09-09T05:31:06.466Z",
+        "end": "2022-08-25T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        },
+        "d_permit_submit_when": "가스시설 설치 전",
+        "d_permit_process_due": null,
+        "d_permit_related_agency": "청주시청",
+        "d_permit_lead_company": "SK하이닉스"
+      }
+    ]
+  },
+  {
+    "id": "track-20",
+    "title": "건축법",
+    "elements": [
+      {
+        "id": "t-20-el-1",
+        "title": "3. 건축 허가",
+        "start": "2022-09-04T15:00:00.000Z",
+        "end": "2022-09-15T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        },
+        "d_permit_submit_when": "착공 전",
+        "d_permit_process_due": "15일",
+        "d_permit_related_agency": "청주시청",
+        "d_permit_lead_company": "SK건설"
+      },
+      {
+        "id": "t-20-el-2",
+        "title": "9. 사용승인",
+        "start": "2022-10-31T15:00:00.000Z",
+        "end": "2022-11-15T15:00:00.000Z",
+        "style": {
+          "backgroundColor": "#FE7F2D",
+          "color": "#000000",
+          "borderRadius": "4px",
+          "boxShadow": "1px 1px 0px rgba(0, 0, 0, 0.25)",
+          "textTransform": "capitalize"
+        },
+        "d_permit_submit_when": "사용 전",
+        "d_permit_process_due": null,
+        "d_permit_related_agency": "청주시청",
+        "d_permit_lead_company": "SK건설"
+      }
+    ]
+  }
+]

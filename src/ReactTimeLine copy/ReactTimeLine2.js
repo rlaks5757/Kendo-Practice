@@ -1,117 +1,342 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
-import "react-timelines/lib/css/style.css";
-import "./ReactTimeLine.scss";
 import moment from "moment";
+import axios from "axios";
+import DialogComponent from "./DialogComponent";
+import Url from "../url";
+import "react-timelines/lib/css/style.css";
+import "./ReactTimeLine2.scss";
 
 const now = new Date();
 
-const clickElement = (element) =>
-  alert(`Clicked element\n${JSON.stringify(element, null, 2)}`);
-
-const MIN_ZOOM = 0;
+const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
 
 const ReactTimeLine2 = () => {
-  const [timeBar, setTimeBar] = useState([]);
   const params = useParams();
 
+  const [timeBar, setTimeBar] = useState([]);
   const [option, setOption] = useState({});
-
-  const handleToggleOpen = () => {
-    setOption((prev) => {
-      return { ...prev, open: !prev.open };
-    });
-  };
-
-  const handleZoomIn = () => {
-    setOption((prev) => {
-      return { ...prev, zoom: Math.min(prev.zoom + 1, MAX_ZOOM) };
-    });
-  };
-
-  const handleZoomOut = () => {
-    setOption((prev) => {
-      return { ...prev, zoom: Math.max(prev.zoom - 1, MIN_ZOOM) };
-    });
-  };
-
-  const handleToggleTrackOpen = (track) => {
-    setOption((state) => {
-      const tracksById = {
-        ...state.tracksById,
-        [track.id]: {
-          ...track,
-          isOpen: !track.isOpen,
-        },
-      };
-
-      return {
-        tracksById,
-        tracks: data,
-      };
-    });
-  };
-
-  const start = new Date("2022-01-01");
-  const end = new Date("2023-12-31");
+  const [start, setStart] = useState(new Date());
+  const [end, setEnd] = useState(new Date());
+  const [toggleDialog, setToggleDiaglog] = useState(false);
+  const [dialogContents, setDialogContents] = useState({});
+  const [projectStartEnd, setProjectStartEnd] = useState({
+    projectName: "",
+    start: "",
+    end: "",
+  });
 
   useEffect(() => {
-    setOption({
-      open: false,
-      zoom: 0,
-      tracks: data,
-    });
+    const axiosData = async () => {
+      const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
+
+      /**
+       * Requset Premit Data
+       */
+      const unifierDataResult = await unifierData.data.data1;
+
+      /**
+       * Requset Milestone Data
+       */
+      const unifierDataResult2 = await unifierData.data.data2;
+
+      const milestoneData = {
+        id: "track-1",
+        title: "MileStone",
+        elements: unifierDataResult2
+          .sort((a, b) => new Date(a.plan_date) - new Date(b.plan_date))
+          .map((com, idx) => {
+            return {
+              id: `t-1-el-${idx + 1}`,
+              title: com.genMilestoneDesc,
+              start: new Date(com.plan_date),
+              end: new Date(
+                `${com.plan_date.slice(0, 10)} 23:00:00
+            `
+              ),
+              style: {
+                backgroundColor: "transparent",
+                color: "#000000",
+                borderRadius: "4px",
+                textTransform: "capitalize",
+                textAlign: "center",
+              },
+              position: idx % 2 === 0 ? "up" : "down",
+            };
+          }),
+      };
+
+      const timeLineDataBase = unifierDataResult.map((com, idx) => {
+        return {
+          id: `track-${idx + 2}`,
+          title: com.d_permit_related_law,
+          elements: com._bp_lineitems
+            .filter((com1) => com1.KeyMilestone_srb === "Yes")
+            .map((com2, idx2) => {
+              return {
+                id: `t-${idx + 2}-el-${idx2 + 1}`,
+                title: com2.d_permit_name,
+                start: new Date(com2.PlanSubmissionDate),
+                end:
+                  com2.PlanSubmissionDate === com2.PlanObtainedDate
+                    ? new Date(
+                        `${com2.PlanObtainedDate.slice(0, 10)} 23:00:00
+                      `
+                      )
+                    : new Date(com2.PlanObtainedDate),
+                style: {
+                  backgroundColor: "#FE7F2D",
+                  color: "#000000",
+                  borderRadius: "4px",
+                  boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+                  textTransform: "capitalize",
+                },
+                d_permit_submit_when: com2.d_permit_submit_when,
+                d_permit_process_due: com2.d_permit_process_due,
+                d_permit_related_agency: com2.d_permit_related_agency,
+                d_permit_lead_company: com2.d_permit_lead_company,
+              };
+            })
+            .sort((a, b) => {
+              if (a.start > b.start) {
+                return 1;
+              }
+              if (a.start < b.start) {
+                return -1;
+              }
+              return 0;
+            }),
+        };
+      });
+
+      const timeLineDataResult = timeLineDataBase.filter(
+        (com) => com.elements.length > 0
+      );
+
+      timeLineDataResult.sort((a, b) => {
+        if (a.elements[0].start > b.elements[0].start) {
+          return 1;
+        }
+        if (a.elements[0].start < b.elements[0].start) {
+          return -1;
+        }
+        return 0;
+      });
+
+      setOption({
+        open: false,
+        zoom: 1,
+        tracks: [milestoneData, ...timeLineDataResult],
+      });
+
+      //Start & End Date Setting
+      const startEndDateArr = [];
+
+      unifierDataResult2.forEach((com) => {
+        startEndDateArr.push(new Date(com.plan_date));
+      });
+
+      timeLineDataResult.forEach((com) => {
+        com.elements.forEach((com2) => {
+          startEndDateArr.push(com2.start);
+          startEndDateArr.push(com2.end);
+        });
+      });
+
+      const startEndDateSorting = startEndDateArr.sort(
+        (a, b) => new Date(a) - new Date(b)
+      );
+
+      const startDate = startEndDateSorting[0];
+      const endDate = startEndDateSorting[startEndDateSorting.length - 1];
+
+      /**
+       * Start Date을 기준으로 1분기 전을 반환하는 함수
+       * @param {Date} date StartDate
+       * @returns
+       */
+      const settingStartDate = (date) => {
+        const targetDate = new Date(date);
+        targetDate.setDate(1);
+
+        const month = new Date(date).getMonth();
+
+        if (month === 0 && month <= 2) {
+          targetDate.setFullYear(targetDate.getFullYear() - 1);
+          targetDate.setMonth(9);
+        } else if (month > 2 && month <= 5) {
+          targetDate.setMonth(0);
+        } else if (month > 5 && month <= 8) {
+          targetDate.setMonth(3);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setMonth(6);
+        }
+
+        setStart(new Date(targetDate));
+      };
+
+      /**
+       * End Date을 기준으로 1분기 후를 반환하는 함수
+       * @param {Date} date StartDate
+       * @returns
+       */
+      const settingEndDate = (date) => {
+        const targetDate = new Date(date);
+
+        const month = new Date(date).getMonth();
+
+        if (month === 0 && month <= 2) {
+          targetDate.setMonth(5);
+        } else if (month > 2 && month <= 5) {
+          targetDate.setMonth(8);
+        } else if (month > 5 && month <= 8) {
+          targetDate.setMonth(11);
+        } else if (month > 8 && month <= 11) {
+          targetDate.setFullYear(targetDate.getFullYear() + 1);
+          targetDate.setMonth(2);
+        }
+
+        const lastDay = new Date(
+          targetDate.getFullYear(),
+          targetDate.getMonth(),
+          0
+        ).getDate();
+
+        targetDate.setDate(lastDay);
+
+        setEnd(new Date(targetDate));
+      };
+
+      settingStartDate(startDate);
+      settingEndDate(endDate);
+
+      if (unifierDataResult2.length > 0) {
+        const projectName = unifierDataResult2[0].project_projectname;
+
+        setProjectStartEnd((prev) => {
+          return { ...prev, projectName, start: startDate, end: endDate };
+        });
+      }
+    };
+
+    axiosData();
   }, [params.id]);
 
   useEffect(() => {
     const timeLine = document.querySelector(".rt-tracks");
+
     if (timeLine !== null) {
       timeLine.firstChild.firstChild.childNodes.forEach((com, idx) => {
-        if (com.firstChild.firstChild.className === "rt-element__content") {
-          com.firstChild.firstChild.className = "rt-element__content milestone";
-          com.firstChild.firstChild.style.width = "100px";
-          com.firstChild.firstChild.style.position = "absolute";
-          com.firstChild.firstChild.style.left = "-49px";
-          com.firstChild.firstChild.style.fontSize = "13px";
+        const spans = document.createElement("span");
+        spans.className = "rt-element__title2";
+        spans.innerHTML = moment(option.tracks[0].elements[idx].start).format(
+          "MM-DD-YYYY"
+        );
 
-          const spans = document.createElement("div");
-          spans.className = "rt-element__title2";
-          spans.style.alignItems = "self-end";
-          spans.innerHTML = moment(data[0].elements[idx].start).format(
-            "MM-DD-YYYY"
-          );
+        const divs = document.createElement("div");
+        divs.style.width = "100%";
+        divs.style.position = "absolute";
+        divs.style.left = "-14px";
 
-          com.firstChild.firstChild.appendChild(spans);
+        const icons = document.createElement("span");
+        icons.className = "k-icon k-i-circle";
 
-          if (data[0].elements[idx].position === "up") {
-            com.firstChild.firstChild.style.top = "0px";
+        if (option.tracks[0].elements[idx].position === "up") {
+        } else {
+        }
+
+        if (option.tracks[0].elements[idx].position === "up") {
+          const changeWidthNode = com.firstChild.firstChild;
+          if (changeWidthNode.className.includes("milestone")) {
+            changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
+            changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
-            com.firstChild.firstChild.style.top = "15px";
-          }
+            com.firstChild.firstChild.style.top = "0px";
 
-          const divs = document.createElement("div");
-          divs.style.width = "100%";
-          divs.style.position = "absolute";
-          divs.style.left = "-14px";
+            com.firstChild.firstChild.className =
+              "rt-element__content milestone";
+            com.firstChild.firstChild.style.position = "absolute";
+            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.width = "100px";
+            com.firstChild.firstChild.style.left = "-50px";
 
-          const icons = document.createElement("span");
-          icons.className = "k-icon k-i-circle";
+            com.firstChild.firstChild.appendChild(spans);
 
-          divs.appendChild(icons);
+            divs.appendChild(icons);
 
-          if (data[0].elements[idx].position === "up") {
             com.style.top = "-5px";
             com.appendChild(divs);
+          }
+        } else {
+          const changeWidthNode = com.lastChild.firstChild;
+
+          if (changeWidthNode.className.includes("milestone")) {
+            changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
+            changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
+            com.firstChild.firstChild.style.top = "15px";
+
+            com.firstChild.firstChild.className =
+              "rt-element__content milestone";
+            com.firstChild.firstChild.style.position = "absolute";
+            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.width = "100px";
+            com.firstChild.firstChild.style.left = "-50px";
+
+            com.firstChild.firstChild.appendChild(spans);
+
+            divs.appendChild(icons);
+
             com.style.top = "35px";
             com.prepend(divs);
           }
         }
       });
     }
-  }, [option.tracks]);
+  }, [option.tracks, option.zoom]);
+
+  useEffect(() => {
+    const tracksElement = document.querySelector(".rt-tracks");
+
+    if (tracksElement !== null) {
+      const tracksNodes = tracksElement.childNodes;
+
+      tracksNodes.forEach((com, idx) => {
+        if (idx !== 0) {
+          const targetChildNodes = com.firstChild.childNodes;
+          targetChildNodes.forEach((com2, idx2) => {
+            const spans = document.createElement("span");
+            spans.className = "rt-element__title3";
+
+            // if (option.tracks[idx].elements[idx2].title.length > 8) {
+            //   spans.innerHTML =
+            //     option.tracks[idx].elements[idx2].title.slice(0, 8) + "...";
+            // } else {
+            //   spans.innerHTML = option.tracks[idx].elements[idx2].title;
+            // }
+            spans.innerHTML = option.tracks[idx].elements[idx2].title;
+
+            com2.firstChild.firstChild.firstChild.style.display = "none";
+            if (idx2 % 2 === 0) {
+              spans.style.top = "-20px";
+            } else {
+              spans.style.top = "45px";
+            }
+
+            if (com2.childNodes.length === 1) {
+              com2.appendChild(spans);
+              spans.style.width = 100 + "px";
+            } else {
+              com2.childNodes[1].style.width =
+                100 + (option.zoom - 1) * 50 + "px";
+            }
+          });
+        }
+      });
+    }
+  }, [option.tracks, option.zoom]);
 
   useEffect(() => {
     const MONTH_NAMES = [
@@ -131,9 +356,9 @@ const ReactTimeLine2 = () => {
 
     const QUARTERS_PER_YEAR = 4;
     const MONTHS_PER_QUARTER = 3;
-    const NUM_OF_YEARS = 2;
+    const NUM_OF_YEARS = end.getFullYear() - start.getFullYear() + 1;
     const MONTHS_PER_YEAR = 12;
-    const START_YEAR = 2022;
+    const START_YEAR = start.getFullYear();
 
     const addMonthsToYear = (year, monthsToAdd) => {
       let y = year;
@@ -200,362 +425,67 @@ const ReactTimeLine2 = () => {
     ];
 
     setTimeBar(buildTimebar1());
-  }, []);
+  }, [end, start]);
+
+  const clickElement = (element) => {
+    handleDialog();
+    setDialogContents(element);
+  };
+
+  const handleToggleOpen = () => {
+    setOption((prev) => {
+      return { ...prev, open: !prev.open };
+    });
+  };
+
+  const handleZoomIn = () => {
+    setOption((prev) => {
+      return { ...prev, zoom: Math.min(prev.zoom + 1, MAX_ZOOM) };
+    });
+  };
+
+  const handleZoomOut = () => {
+    setOption((prev) => {
+      return { ...prev, zoom: Math.max(prev.zoom - 1, MIN_ZOOM) };
+    });
+  };
+
+  const handleDialog = () => {
+    setToggleDiaglog((prev) => !prev);
+  };
 
   return (
-    <div className="app">
-      <h1 className="title">React Timelines</h1>
+    <div className="reactTimeLine">
+      {/* <h1 className="title">React Timelines</h1> */}
       {option.tracks !== undefined && (
         <Timeline
           scale={{
             start,
             end,
-            // zoom: option.zoom,
-            // zoomMin: MIN_ZOOM,
-            // zoomMax: MAX_ZOOM,
+            zoom: option.zoom,
+            zoomMin: MIN_ZOOM,
+            zoomMax: MAX_ZOOM,
           }}
           isOpen={option.open}
           toggleOpen={handleToggleOpen}
-          // zoomIn={handleZoomIn}
-          // zoomOut={handleZoomOut}
+          zoomIn={handleZoomIn}
+          zoomOut={handleZoomOut}
           clickElement={clickElement}
-          // clickTrackButton={(track) => {
-          //   // eslint-disable-next-line no-alert
-          //   alert(JSON.stringify(track));
-          // }}
           timebar={timeBar}
           tracks={option.tracks}
           now={now}
-          toggleTrackOpen={handleToggleTrackOpen}
-          // enableSticky
-          // scrollToNow
+          enableSticky={false}
         />
+      )}
+      {toggleDialog && (
+        <DialogComponent
+          handleDialog={handleDialog}
+          dialogContents={dialogContents}
+          projectStartEnd={projectStartEnd}
+        ></DialogComponent>
       )}
     </div>
   );
 };
 
 export default ReactTimeLine2;
-
-const data = [
-  {
-    id: "track-1",
-    title: "MileStone",
-    elements: [
-      {
-        id: "0",
-        title: "선착수 공문 접수",
-        start: new Date("05-02-2022 00:00:00"),
-        end: new Date("05-02-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "1",
-        title: "교통영향평가 접수",
-        start: new Date("05-27-2022 00:00:00"),
-        end: new Date("05-27-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "2",
-        title: "착공",
-        start: new Date("07-25-2022 00:00:00"),
-        end: new Date("07-25-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "3",
-        title: "기초",
-        start: new Date("08-22-2022 00:00:00"),
-        end: new Date("08-22-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "4",
-        title: "골조",
-        start: new Date("09-14-2022 00:00:00"),
-        end: new Date("09-14-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "5",
-        title: "MEP",
-        start: new Date("10-17-2022 00:00:00"),
-        end: new Date("10-17-2022 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "6",
-        title: "E/V",
-        start: new Date("01-02-2023 00:00:00"),
-        end: new Date("01-02-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "7",
-        title: "생산장비 반입",
-        start: new Date("02-28-2023 00:00:00"),
-        end: new Date("02-28-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "8",
-        title: "준공(제2연구동)",
-        start: new Date("05-31-2023 00:00:00"),
-        end: new Date("05-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "up",
-      },
-      {
-        id: "9",
-        title: "준공(제2충방전등)",
-        start: new Date("08-31-2023 00:00:00"),
-        end: new Date("08-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-      {
-        id: "10",
-        title: "준공(Phase2)",
-        start: new Date("11-30-2023 00:00:00"),
-        end: new Date("11-30-2023 23:00:00"),
-        style: {
-          backgroundColor: "transparent",
-          color: "#000000",
-          borderRadius: "4px",
-          textTransform: "capitalize",
-          textAlign: "center",
-        },
-        position: "down",
-      },
-    ],
-  },
-  {
-    id: "track-2",
-    title: "교통영향평가",
-    elements: [
-      {
-        id: "t-1-el-1",
-        title: "교평 제출 및 처리통보",
-        start: new Date("04-05-2022 00:00:00"),
-        end: new Date("05-15-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "t-1-el-2",
-        title: "본심의",
-        start: new Date("05-30-2022 00:00:00"),
-        end: new Date("07-15-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-3",
-    title: "건축(Phase.1)",
-    elements: [
-      {
-        id: "0",
-        title: "건축허가",
-        start: new Date("07-15-2022 00:00:00"),
-        end: new Date("08-30-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "1",
-        title: "건축착공신고",
-        start: new Date("10-15-2022 00:00:00"),
-        end: new Date("10-31-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "2",
-        title: "건축사용신고",
-        start: new Date("05-01-2023 00:00:00"),
-        end: new Date("05-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-4",
-    title: "유해위험방지계획서",
-    elements: [
-      {
-        id: "0",
-        title: "공작물축조신고",
-        start: new Date("06-15-2023 00:00:00"),
-        end: new Date("06-24-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-5",
-    title: "건축(Phase.2)",
-    elements: [
-      {
-        id: "0",
-        title: "건축허가",
-        start: new Date("10-15-2022 00:00:00"),
-        end: new Date("11-30-2022 00:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "1",
-        title: "건축착공신고",
-        start: new Date("01-15-2023 00:00:00"),
-        end: new Date("01-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-      {
-        id: "2",
-        title: "건축사용신고",
-        start: new Date("08-01-2023 00:00:00"),
-        end: new Date("08-31-2023 00:00:00"),
-        style: {
-          backgroundColor: "#FCCA46",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-  {
-    id: "track-6",
-    title: "환경인허가",
-    elements: [
-      {
-        id: "0",
-        title: "가동개시신고",
-        start: new Date("10-31-2023 00:00:00"),
-        end: new Date("10-31-2023 23:00:00"),
-        style: {
-          backgroundColor: "#FE7F2D",
-          color: "#000000",
-          borderRadius: "4px",
-          boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-          textTransform: "capitalize",
-        },
-      },
-    ],
-  },
-];
