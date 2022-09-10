@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
 import moment from "moment";
@@ -432,27 +432,27 @@ const ReactTimeLine2 = () => {
     setDialogContents(element);
   };
 
-  const handleToggleOpen = () => {
+  const handleToggleOpen = useCallback(() => {
     setOption((prev) => {
       return { ...prev, open: !prev.open };
     });
-  };
+  }, []);
 
-  const handleZoomIn = () => {
+  const handleZoomIn = useCallback(() => {
     setOption((prev) => {
       return { ...prev, zoom: Math.min(prev.zoom + 1, MAX_ZOOM) };
     });
-  };
+  }, []);
 
-  const handleZoomOut = () => {
+  const handleZoomOut = useCallback(() => {
     setOption((prev) => {
       return { ...prev, zoom: Math.max(prev.zoom - 1, MIN_ZOOM) };
     });
-  };
+  }, []);
 
-  const handleDialog = () => {
+  const handleDialog = useCallback(() => {
     setToggleDiaglog((prev) => !prev);
-  };
+  }, []);
 
   return (
     <div className="reactTimeLine">
