@@ -1,4 +1,14 @@
 .reactTimeLineQuality {
+  position: relative;
+
+  .rt-layout__side {
+    width: 380px;
+  }
+
+  .rt-layout__main {
+    width: calc(100% - 380px);
+  }
+
   // .rt-track-key__entry {
   //   height: 100px;
   // }
@@ -43,6 +53,41 @@
 
   .rt-marker.rt-marker--pointer.rt-is-visible {
     display: none;
+  }
+
+  .trackIconBox {
+    width: 100%;
+    left: -15px;
+    top: 5px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+
+    .qualityAct {
+      color: red;
+    }
+  }
+
+  .rt-element {
+    display: none;
+  }
+
+  .iconslengend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    padding: 5px 20px;
+
+    .iconslengendBox {
+      display: flex;
+      justify-content: space-between;
+
+      .qualityAct {
+        color: red;
+      }
+    }
   }
 }
 

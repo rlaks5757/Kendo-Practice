@@ -1,19 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
-
 import Timeline from "react-timelines";
+import axios from "axios";
+import _ from "lodash";
+import DialogComponent from "./DialogComponent";
+import Url from "../url";
+import "./ReactTimeLineQuality.scss";
 import "react-timelines/lib/css/style.css";
 
-import axios from "axios";
-import moment from "moment";
-import Url from "../url";
-import _ from "lodash";
-import "./ReactTimeLineQuality.scss";
-
 const now = new Date();
-
-const clickElement = (element) =>
-  alert(`Clicked element\n${JSON.stringify(element, null, 2)}`);
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
@@ -30,6 +25,9 @@ const ReactTimeLineQuality = () => {
     start: "",
     end: "",
   });
+  const [trackItems, setTrackItems] = useState([]);
+  const [toggleDialog, setToggleDiaglog] = useState(false);
+  const [dialogContents, setDialogContents] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +57,16 @@ const ReactTimeLineQuality = () => {
         zoom: 1,
         tracks: createTracks,
       });
+
+      const trackItems_arr = [];
+
+      createTracks.forEach((com) =>
+        com.tracks.forEach((com2) =>
+          com2.elements.forEach((com3) => trackItems_arr.push(com3))
+        )
+      );
+
+      setTrackItems(trackItems_arr);
 
       const startEndDateArr = [];
 
@@ -144,6 +152,7 @@ const ReactTimeLineQuality = () => {
         });
       }
     };
+
     fetchData();
   }, [params]);
 
@@ -236,6 +245,37 @@ const ReactTimeLineQuality = () => {
     setTimeBar(buildTimebar1());
   }, [end, start]);
 
+  useEffect(() => {
+    const timeLine = document.querySelector(".rt-tracks");
+    if (timeLine !== null) {
+      const tracksNodes = timeLine.childNodes;
+
+      tracksNodes.forEach((com, idx) => {
+        if (com.firstChild.nextSibling !== null) {
+          const targetChildNodes = com.firstChild.nextSibling.childNodes;
+          targetChildNodes.forEach((com2, idx2) => {
+            com2.firstChild.childNodes.forEach((com3, idx3) => {
+              const targetTrack =
+                option.tracks[idx].tracks[idx2].elements[idx3];
+
+              const divs = document.createElement("div");
+              divs.className = "trackIconBox";
+
+              const icons = document.createElement("span");
+              if (targetTrack.type === "plan") {
+                icons.className = "k-icon k-i-circle qualityPlan";
+              } else {
+                icons.className = "k-icon k-i-circle qualityAct";
+              }
+              divs.appendChild(icons);
+              com3.appendChild(divs);
+            });
+          });
+        }
+      });
+    }
+  }, [option]);
+
   const handleToggleOpen = () => {
     setOption((prev) => {
       return { ...prev, open: !prev.open };
@@ -254,8 +294,6 @@ const ReactTimeLineQuality = () => {
     });
   }, []);
 
-  console.log(option.zoom);
-
   const handleToggleTrackOpen = (track) => {
     const targetTrackIdx = option.tracks.findIndex(
       (com) => com.id === track.id
@@ -269,8 +307,27 @@ const ReactTimeLineQuality = () => {
     });
   };
 
+  const clickElement = (element) => {
+    handleDialog();
+    setDialogContents(element);
+  };
+
+  const handleDialog = useCallback(() => {
+    setToggleDiaglog((prev) => !prev);
+  }, []);
+
   return (
     <div className="reactTimeLineQuality">
+      <div className="iconslengend">
+        <div className="iconslengendBox">
+          <div>Plan Date:</div>
+          <div className="k-icon k-i-circle qualityPlan"></div>
+        </div>
+        <div className="iconslengendBox">
+          <div>Actual_date:</div>
+          <div className="k-icon k-i-circle qualityAct"></div>
+        </div>
+      </div>
       {option.tracks !== undefined && (
         <Timeline
           scale={{
@@ -291,6 +348,14 @@ const ReactTimeLineQuality = () => {
           toggleTrackOpen={handleToggleTrackOpen}
           enableSticky={false}
         />
+      )}
+      {toggleDialog && (
+        <DialogComponent
+          handleDialog={handleDialog}
+          trackItems={trackItems}
+          dialogContents={dialogContents}
+          projectStartEnd={projectStartEnd}
+        ></DialogComponent>
       )}
     </div>
   );
@@ -322,13 +387,6 @@ const createTrackElements = (base_obj, idx1, idx2) => {
       `${base_obj.plan_date.slice(0, 10)} 23:00:00
                       `
     ),
-    style: {
-      backgroundColor: "#FE7F2D",
-      color: "#000000",
-      borderRadius: "4px",
-      boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-      textTransform: "capitalize",
-    },
     type: "plan",
   };
 
@@ -341,13 +399,6 @@ const createTrackElements = (base_obj, idx1, idx2) => {
         `${base_obj.Actual_date.slice(0, 10)} 23:00:00
                       `
       ),
-      style: {
-        backgroundColor: "#FE7F2D",
-        color: "#000000",
-        borderRadius: "4px",
-        boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-        textTransform: "capitalize",
-      },
       type: "act",
     };
     return [plan, act];

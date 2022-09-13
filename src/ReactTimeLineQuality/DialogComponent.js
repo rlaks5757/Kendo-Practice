@@ -1,55 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Dialog } from "@progress/kendo-react-dialogs";
 import moment from "moment";
 
-const DialogComponent = ({ handleDialog, dialogContents, projectStartEnd }) => {
-  return (
-    <Dialog
-      title={
-        dialogContents.position === undefined
-          ? "Permit Information"
-          : "MileStone Information"
-      }
-      onClose={handleDialog}
-    >
-      {dialogContents.position === undefined ? (
-        <div>
-          <p>이름: {dialogContents.title}</p>
-          <p>
-            시작일:{" "}
-            {moment(new Date(dialogContents.start)).format("YY년 MM월 DD일")}
-          </p>
-          <p>
-            종료일:{" "}
-            {moment(new Date(dialogContents.end)).format("YY년 MM월 DD일")}
-          </p>
-          <br />
-          <p>주관사: {dialogContents.d_permit_lead_company}</p>
-          <p>제출시기: {dialogContents.d_permit_submit_when}</p>
-          <p>처리기간: {dialogContents.d_permit_process_due}</p>
-          <p>관계기관: {dialogContents.d_permit_related_agency}</p>
-        </div>
-      ) : (
-        <div>
-          <p>Project Name: {projectStartEnd.projectName}</p>
-          <p>Project Duration </p>
-          <p style={{ marginLeft: "15px" }}>
-            Start Date:{" "}
-            {moment(new Date(projectStartEnd.start)).format("YY년 MM월 DD일")}
-          </p>
-          <p style={{ marginLeft: "15px" }}>
-            End Date:{" "}
-            {moment(new Date(projectStartEnd.end)).format("YY년 MM월 DD일")}
-          </p>
-          <br />
+const DialogComponent = ({
+  handleDialog,
+  dialogContents,
+  projectStartEnd,
+  trackItems,
+}) => {
+  const [dialogContent, setDialogContent] = useState({});
 
-          <p>MileStone Name: {dialogContents.title}</p>
-          <p>
-            MileStone Start Date:{" "}
-            {moment(new Date(dialogContents.start)).format("YY년 MM월 DD일")}
-          </p>
-        </div>
-      )}
+  useEffect(() => {
+    const split_id = dialogContents.id.split("-");
+
+    const filterTrackItems = trackItems.filter((com) =>
+      com.id.includes(`${split_id[0]}-${split_id[1]}-${split_id[2]}`)
+    );
+
+    const planTrackItem = trackItems.find(
+      (com) => (com.id = `${split_id[0]}-${split_id[1]}-${split_id[2]}-1`)
+    );
+
+    const actTrackItem = trackItems.find(
+      (com) => (com.id = `${split_id[0]}-${split_id[1]}-${split_id[2]}-2`)
+    );
+
+    if (filterTrackItems.lenght > 1) {
+      setDialogContent({
+        title: filterTrackItems[0].title,
+        plan_date: moment(new Date(planTrackItem.start)).format(
+          "YY년 MM월 DD일"
+        ),
+        act_date: moment(new Date(actTrackItem.start)).format("YY년 MM월 DD일"),
+      });
+    } else {
+      setDialogContent({
+        title: filterTrackItems[0].title,
+        plan_date: moment(new Date(planTrackItem.start)).format(
+          "YY년 MM월 DD일"
+        ),
+        act_date: "-",
+      });
+    }
+  }, [dialogContents, trackItems]);
+
+  return (
+    <Dialog title={"Quality Critical Process"} onClose={handleDialog}>
+      <div>
+        <p>Title: {dialogContents.title}</p>
+        <p>Plan Date: {dialogContent.plan_date}</p>
+        <p>Actual Date: {dialogContent.act_date}</p>
+      </div>
     </Dialog>
   );
 };

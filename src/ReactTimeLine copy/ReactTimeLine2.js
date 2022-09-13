@@ -244,10 +244,6 @@ const ReactTimeLine2 = () => {
         icons.className = "k-icon k-i-circle";
 
         if (option.tracks[0].elements[idx].position === "up") {
-        } else {
-        }
-
-        if (option.tracks[0].elements[idx].position === "up") {
           const changeWidthNode = com.firstChild.firstChild;
           if (changeWidthNode.className.includes("milestone")) {
             changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
@@ -265,7 +261,7 @@ const ReactTimeLine2 = () => {
             com.firstChild.firstChild.appendChild(spans);
 
             divs.appendChild(icons);
-
+            console.log(com);
             com.style.top = "-5px";
             com.appendChild(divs);
           }
