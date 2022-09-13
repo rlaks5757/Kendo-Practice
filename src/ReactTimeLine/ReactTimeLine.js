@@ -53,20 +53,33 @@ const ReactTimeLine = () => {
   };
 
   const handleToggleTrackOpen = (track) => {
-    setOption((state) => {
-      const tracksById = {
-        ...state.tracksById,
-        [track.id]: {
-          ...track,
-          isOpen: !track.isOpen,
-        },
-      };
+    const targetTrackIdx = option.tracks.findIndex(
+      (com) => com.id === track.id
+    );
 
-      return {
-        tracksById,
-        tracks: Object.values(tracksById),
-      };
+    option.tracks[targetTrackIdx].isOpen =
+      !option.tracks[targetTrackIdx].isOpen;
+
+    console.log(option.tracks);
+
+    setOption((prev) => {
+      return { ...prev, track: option.tracks };
     });
+
+    // const targetOption = setOption((state) => {
+    //   const tracksById = {
+    //     ...state.tracksById,
+    //     [track.id]: {
+    //       ...track,
+    //       isOpen: !track.isOpen,
+    //     },
+    //   };
+
+    //   return {
+    //     tracksById,
+    //     tracks: Object.values(tracksById),
+    //   };
+    // });
   };
 
   const start = new Date(`${START_YEAR}`);
