@@ -13,7 +13,7 @@ const now = new Date();
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
 
-const ReactTimeLineQuality = () => {
+const ReactTimeLineQuality = ({ positionData }) => {
   const params = useParams();
 
   const [timeBar, setTimeBar] = useState([]);
@@ -31,11 +31,13 @@ const ReactTimeLineQuality = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const unifierData = await axios.get(`${Url}/qualityProcess/${params.id}`);
+      const unifierData = await axios.get(
+        `${Url}/qualityProcess/${params.project_code}`
+      );
 
       const axiosData =
         unifierData.data.data1[unifierData.data.data1.length - 1];
-
+      console.log(unifierData);
       const createTracks = _.uniqBy(axiosData._bp_lineitems, "EngDisc_spd").map(
         (com, idx) => {
           return {
@@ -154,7 +156,7 @@ const ReactTimeLineQuality = () => {
     };
 
     fetchData();
-  }, [params]);
+  }, [params, positionData]);
 
   useEffect(() => {
     const MONTH_NAMES = [

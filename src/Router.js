@@ -10,6 +10,7 @@ import ReactTimeLineQuality from "./ReactTimeLineQuality/ReactTimeLineQuality";
 import OrgChart from "./OrgChart/OrgChart";
 import Meeting4 from "./Practice/Meeting4";
 import Meeting42 from "./Practice/Meeting4_2";
+import QualityTileLayout from "./QualityTileLayout/QualityTileLayout";
 
 const Router = () => {
   return (
@@ -21,10 +22,15 @@ const Router = () => {
         <Route path="/time" element={<KendoTimeLine />} />
         <Route path="/time2" element={<ReactTimeLine />} />
         <Route path="/time3/:id" element={<ReactTimeLine2 />} />
-        <Route path="/qtime3/:id" element={<ReactTimeLineQuality />} />
+
         <Route path="/org" element={<OrgChart />} />
         <Route path="/meeting/:project_code" element={<Meeting4 />} />
         <Route path="/meeting2/:project_code" element={<Meeting42 />} />
+        <Route
+          path="/qtime3/:project_code"
+          element={<ReactTimeLineQuality />}
+        />
+        <Route path="/:project_code/qualityp" element={<QualityTileLayout />} />
       </Routes>
     </BrowserRouter>
   );
