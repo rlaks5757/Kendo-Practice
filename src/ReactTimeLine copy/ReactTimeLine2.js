@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
 import moment from "moment";
 import axios from "axios";
+import _ from "lodash";
 import DialogComponent from "./DialogComponent";
 import Url from "../url";
 import "react-timelines/lib/css/style.css";
@@ -17,7 +18,11 @@ const ReactTimeLine2 = () => {
   const params = useParams();
 
   const [timeBar, setTimeBar] = useState([]);
-  const [option, setOption] = useState({});
+  const [option, setOption] = useState({
+    open: false,
+    zoom: 1,
+    tracks: [],
+  });
   const [start, setStart] = useState(new Date());
   const [end, setEnd] = useState(new Date());
   const [toggleDialog, setToggleDiaglog] = useState(false);
@@ -30,7 +35,9 @@ const ReactTimeLine2 = () => {
 
   useEffect(() => {
     const axiosData = async () => {
-      const unifierData = await axios.get(`${Url}/timeLine/${params.id}`);
+      const unifierData = await axios.get(
+        `${Url}/timeLine/${params.project_code}`
+      );
 
       /**
        * Requset Premit Data
@@ -51,11 +58,20 @@ const ReactTimeLine2 = () => {
             return {
               id: `t-1-el-${idx + 1}`,
               title: com.genMilestoneDesc,
-              start: new Date(com.plan_date),
-              end: new Date(
-                `${com.plan_date.slice(0, 10)} 23:00:00
+              start:
+                com.genActualDate === null
+                  ? new Date(com.plan_date)
+                  : new Date(com.genActualDate),
+              end:
+                com.genActualDate === null
+                  ? new Date(
+                      `${com.plan_date.slice(0, 10)} 23:00:00
             `
-              ),
+                    )
+                  : new Date(
+                      `${com.genActualDate.slice(0, 10)} 23:00:00
+          `
+                    ),
               style: {
                 backgroundColor: "transparent",
                 color: "#000000",
@@ -64,50 +80,58 @@ const ReactTimeLine2 = () => {
                 textAlign: "center",
               },
               position: idx % 2 === 0 ? "up" : "down",
+              plan_date: com.plan_date,
+              genActualDate: com.genActualDate,
             };
           }),
       };
 
-      const timeLineDataBase = unifierDataResult.map((com, idx) => {
+      const addStatusUnifierDataResult = unifierDataResult.map((com) => {
+        return {
+          ...com,
+          _bp_lineitems: com._bp_lineitems.map((com2) => {
+            return { ...com2, status: addStatus(com2) };
+          }),
+        };
+      });
+
+      const timeLineDataBase = addStatusUnifierDataResult.map((com, idx) => {
         return {
           id: `track-${idx + 2}`,
           title: com.d_permit_related_law,
-          elements: com._bp_lineitems
-            .filter((com1) => com1.KeyMilestone_srb === "Yes")
-            .map((com2, idx2) => {
-              return {
-                id: `t-${idx + 2}-el-${idx2 + 1}`,
-                title: com2.d_permit_name,
-                start: new Date(com2.PlanSubmissionDate),
-                end:
-                  com2.PlanSubmissionDate === com2.PlanObtainedDate
-                    ? new Date(
-                        `${com2.PlanObtainedDate.slice(0, 10)} 23:00:00
-                      `
-                      )
-                    : new Date(com2.PlanObtainedDate),
-                style: {
-                  backgroundColor: "#FE7F2D",
-                  color: "#000000",
-                  borderRadius: "4px",
-                  boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
-                  textTransform: "capitalize",
-                },
-                d_permit_submit_when: com2.d_permit_submit_when,
-                d_permit_process_due: com2.d_permit_process_due,
-                d_permit_related_agency: com2.d_permit_related_agency,
-                d_permit_lead_company: com2.d_permit_lead_company,
-              };
-            })
-            .sort((a, b) => {
-              if (a.start > b.start) {
-                return 1;
-              }
-              if (a.start < b.start) {
-                return -1;
-              }
-              return 0;
-            }),
+          elements: _.sortBy(
+            com._bp_lineitems
+              .filter((com1) => com1.KeyMilestone_srb === "Yes")
+              .map((com2, idx2) => {
+                return {
+                  id: `t-${idx + 2}-el-${idx2 + 1}`,
+                  title: com2.d_permit_name,
+                  start:
+                    com2.ActualSubmissionDate !== null &&
+                    com2.ActualObtainedDate !== null
+                      ? new Date(com2.ActualSubmissionDate)
+                      : new Date(com2.PlanSubmissionDate),
+                  end: handleItemEndDate(com2),
+                  style: {
+                    backgroundColor: selectColor(com2.status),
+                    color: "#000000",
+                    borderRadius: "4px",
+                    boxShadow: "1px 1px 0px rgba(0, 0, 0, 0.25)",
+                    textTransform: "capitalize",
+                  },
+                  d_permit_submit_when: com2.d_permit_submit_when,
+                  d_permit_process_due: com2.d_permit_process_due,
+                  d_permit_related_agency: com2.d_permit_related_agency,
+                  d_permit_lead_company: com2.d_permit_lead_company,
+                  PlanSubmissionDate: com2.PlanSubmissionDate,
+                  PlanObtainedDate: com2.PlanObtainedDate,
+                  ActualSubmissionDate: com2.ActualSubmissionDate,
+                  ActualObtainedDate: com2.ActualObtainedDate,
+                  status: com2.status,
+                };
+              }),
+            "start"
+          ),
         };
       });
 
@@ -222,7 +246,7 @@ const ReactTimeLine2 = () => {
     };
 
     axiosData();
-  }, [params.id]);
+  }, [params.project_code]);
 
   useEffect(() => {
     const timeLine = document.querySelector(".rt-tracks");
@@ -261,7 +285,6 @@ const ReactTimeLine2 = () => {
             com.firstChild.firstChild.appendChild(spans);
 
             divs.appendChild(icons);
-            console.log(com);
             com.style.top = "-5px";
             com.appendChild(divs);
           }
@@ -453,7 +476,7 @@ const ReactTimeLine2 = () => {
   return (
     <div className="reactTimeLine">
       {/* <h1 className="title">React Timelines</h1> */}
-      {option.tracks !== undefined && (
+      {option.tracks.length > 0 && (
         <Timeline
           scale={{
             start,
@@ -485,3 +508,77 @@ const ReactTimeLine2 = () => {
 };
 
 export default ReactTimeLine2;
+
+const addStatus = (target_obj) => {
+  const {
+    PlanSubmissionDate,
+    // PlanObtainedDate,
+    ActualSubmissionDate,
+    ActualObtainedDate,
+  } = target_obj;
+
+  const today = new Date();
+  today.setHours(0);
+  today.setMinutes(0);
+  today.setSeconds(0);
+
+  if (ActualSubmissionDate === null && ActualObtainedDate === null) {
+    if (new Date(PlanSubmissionDate) < today) {
+      return "Delay";
+    } else {
+      return "Not Started";
+    }
+  } else if (ActualSubmissionDate && ActualObtainedDate === null) {
+    return "In Progress";
+  } else if (ActualSubmissionDate && ActualObtainedDate) {
+    return "Finished";
+  }
+};
+
+const selectColor = (status) => {
+  switch (status) {
+    case "Delay":
+      return "red";
+
+    case "Not Started":
+      return "#FE7F2D";
+
+    case "In Progress":
+      return "yellow";
+
+    case "Finished":
+      return "gray";
+
+    default:
+      return "#FE7F2D";
+  }
+};
+
+const handleItemEndDate = (target_obj) => {
+  const {
+    PlanSubmissionDate,
+    PlanObtainedDate,
+    ActualSubmissionDate,
+    ActualObtainedDate,
+  } = target_obj;
+
+  if (ActualSubmissionDate !== null && ActualObtainedDate !== null) {
+    if (ActualSubmissionDate === ActualObtainedDate) {
+      return new Date(
+        `${ActualObtainedDate.slice(0, 10)} 23:00:00
+      `
+      );
+    } else {
+      return new Date(ActualObtainedDate);
+    }
+  } else {
+    if (PlanSubmissionDate === PlanObtainedDate) {
+      return new Date(
+        `${PlanObtainedDate.slice(0, 10)} 23:00:00
+      `
+      );
+    } else {
+      return new Date(PlanObtainedDate);
+    }
+  }
+};

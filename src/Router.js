@@ -21,13 +21,13 @@ const Router = () => {
         <Route path="/mile2" element={<Milestone2 />} />
         <Route path="/time" element={<KendoTimeLine />} />
         <Route path="/time2" element={<ReactTimeLine />} />
-        <Route path="/time3/:id" element={<ReactTimeLine2 />} />
 
         <Route path="/org" element={<OrgChart />} />
         <Route path="/meeting/:project_code" element={<Meeting4 />} />
         <Route path="/meeting2/:project_code" element={<Meeting42 />} />
+        <Route path="/:project_code/time3" element={<ReactTimeLine2 />} />
         <Route
-          path="/qtime3/:project_code"
+          path="/:project_code/qtime3"
           element={<ReactTimeLineQuality />}
         />
         <Route path="/:project_code/qualityp" element={<QualityTileLayout />} />

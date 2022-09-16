@@ -26,28 +26,24 @@ const QualityTileLayout = () => {
           </div>
         ),
         reorderable: !selected,
-        resizable: width > 768 ? true : "vertical",
       },
       {
         header: "Lessons & Learned Status",
         body: "",
         reorderable: !selected,
-        resizable: width > 768 ? true : "vertical",
       },
       {
-        header: "Docuemnt Change Status",
+        header: "Document Change Status",
         body: "",
         reorderable: !selected,
-        resizable: width > 768 ? true : "vertical",
       },
       {
         header: "COPQ",
         body: "",
         reorderable: !selected,
-        resizable: width > 768 ? true : "vertical",
       },
     ],
-    [positionData, selected, width]
+    [positionData, selected]
   );
 
   useEffect(() => {
@@ -106,21 +102,25 @@ const pcView = [
     col: 1,
     colSpan: 4,
     rowSpan: 3,
+    order: 1,
   },
   {
     col: 1,
     colSpan: 2,
     rowSpan: 1,
+    order: 2,
   },
   {
     col: 3,
     colSpan: 1,
     rowSpan: 1,
+    order: 3,
   },
   {
     col: 4,
     colSpan: 1,
     rowSpan: 1,
+    order: 4,
   },
 ];
 
