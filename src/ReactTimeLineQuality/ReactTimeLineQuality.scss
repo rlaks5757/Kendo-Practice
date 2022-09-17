@@ -1,0 +1,110 @@
+.reactTimeLineQuality {
+  position: relative;
+
+  .rt-layout__side {
+    width: 380px;
+  }
+
+  .rt-layout__main {
+    width: calc(100% - 380px);
+  }
+
+  // .rt-track-key__entry {
+  //   height: 100px;
+  // }
+
+  // .rt-track__elements {
+  //   height: 100px;
+  // }
+
+  // .rt-track__element {
+  //   top: 30px;
+  //   min-width: 20px;
+  // }
+
+  .k-icon.k-i-circle {
+    font-size: 30px;
+  }
+
+  .rt-element__content.milestone {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+
+    .rt-element__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      align-items: flex-start;
+      z-index: 100;
+    }
+  }
+
+  .rt-element__title2 {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .rt-element__tooltip {
+    z-index: 100000;
+  }
+
+  .rt-marker.rt-marker--pointer.rt-is-visible {
+    display: none;
+  }
+
+  .trackIconBox {
+    width: 100%;
+    left: -15px;
+    top: 5px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+
+    .qualityAct {
+      color: red;
+    }
+  }
+
+  .rt-element {
+    display: none;
+  }
+
+  .iconslengend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    padding: 5px 20px;
+
+    .iconslengendBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .qualityAct {
+        color: red;
+      }
+    }
+  }
+}
+
+.k-window-content.k-dialog-content {
+  min-width: 300px;
+}
+
+.rt-element__tooltip {
+  display: none;
+}
+
+.rt-element__title3 {
+  font-size: 0.8rem;
+  position: absolute;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

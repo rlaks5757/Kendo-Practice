@@ -1,0 +1,290 @@
+[
+  {
+    "id": "track-0",
+    "title": "Process",
+    "isOpen": true,
+    "elements": [],
+    "tracks": [
+      {
+        "id": "t-0-0",
+        "title": "[Quality Check] Major Equipment Data Sheet Review",
+        "elements": [
+          {
+            "id": "t-0-0-1",
+            "title": "[Quality Check] Major Equipment Data Sheet Review",
+            "start": "2021-09-15T15:00:00.000Z",
+            "end": "2021-09-16T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-0-1",
+        "title": "Reflection of HAZOP",
+        "elements": [
+          {
+            "id": "t-0-1-1",
+            "title": "Reflection of HAZOP",
+            "start": "2021-09-29T15:00:00.000Z",
+            "end": "2021-09-30T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-0-1-2",
+            "title": "Reflection of HAZOP",
+            "start": "2021-09-28T15:00:00.000Z",
+            "end": "2021-09-29T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      },
+      {
+        "id": "t-0-2",
+        "title": "Design Verification for IFD P&ID",
+        "elements": [
+          {
+            "id": "t-0-2-1",
+            "title": "Design Verification for IFD P&ID",
+            "start": "2021-11-18T15:00:00.000Z",
+            "end": "2021-11-19T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-0-3",
+        "title": "[Quality Check] Quality Check w/hold IFC P&ID",
+        "elements": [
+          {
+            "id": "t-0-3-1",
+            "title": "[Quality Check] Quality Check w/hold IFC P&ID",
+            "start": "2022-04-28T15:00:00.000Z",
+            "end": "2022-04-29T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-0-3-2",
+            "title": "[Quality Check] Quality Check w/hold IFC P&ID",
+            "start": "2022-04-27T15:00:00.000Z",
+            "end": "2022-04-28T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "track-1",
+    "title": "Mechanical",
+    "isOpen": true,
+    "elements": [],
+    "tracks": [
+      {
+        "id": "t-1-0",
+        "title": "2nd Mech. Compliance Check",
+        "elements": [
+          {
+            "id": "t-1-0-1",
+            "title": "2nd Mech. Compliance Check",
+            "start": "2022-05-28T15:00:00.000Z",
+            "end": "2022-05-29T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-1-1",
+        "title": "3rd Data Consistency Check (w/Process, Piping, CSA, Elec & Inst.)",
+        "elements": [
+          {
+            "id": "t-1-1-1",
+            "title": "3rd Data Consistency Check (w/Process, Piping, CSA, Elec & Inst.)",
+            "start": "2022-06-28T15:00:00.000Z",
+            "end": "2022-06-29T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-1-1-2",
+            "title": "3rd Data Consistency Check (w/Process, Piping, CSA, Elec & Inst.)",
+            "start": "2022-06-29T15:00:00.000Z",
+            "end": "2022-06-30T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "track-2",
+    "title": "Piping",
+    "isOpen": true,
+    "elements": [],
+    "tracks": [
+      {
+        "id": "t-2-0",
+        "title": "Design Kick Off Meeting w/BP",
+        "elements": [
+          {
+            "id": "t-2-0-1",
+            "title": "Design Kick Off Meeting w/BP",
+            "start": "2021-10-12T15:00:00.000Z",
+            "end": "2021-10-13T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-2-1",
+        "title": "[Quality Check] Piping Material Spec. (PMS)",
+        "elements": [
+          {
+            "id": "t-2-1-1",
+            "title": "[Quality Check] Piping Material Spec. (PMS)",
+            "start": "2021-12-12T15:00:00.000Z",
+            "end": "2021-12-13T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-2-2",
+        "title": "[Quality Check] PLOT PLAN",
+        "elements": [
+          {
+            "id": "t-2-2-1",
+            "title": "[Quality Check] PLOT PLAN",
+            "start": "2021-11-21T15:00:00.000Z",
+            "end": "2021-11-22T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-2-3",
+        "title": "[Quality Check] 50% 3D Model Review (UTOS)",
+        "elements": [
+          {
+            "id": "t-2-3-1",
+            "title": "[Quality Check] 50% 3D Model Review (UTOS)",
+            "start": "2021-11-21T15:00:00.000Z",
+            "end": "2021-11-22T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-2-4",
+        "title": "[Quality Check] 80% 3D Model Review",
+        "elements": [
+          {
+            "id": "t-2-4-1",
+            "title": "[Quality Check] 80% 3D Model Review",
+            "start": "2022-03-27T15:00:00.000Z",
+            "end": "2022-03-28T14:00:00.000Z",
+            "type": "plan"
+          }
+        ]
+      },
+      {
+        "id": "t-2-5",
+        "title": "[Quality Check] Critical Stress Analysis",
+        "elements": [
+          {
+            "id": "t-2-5-1",
+            "title": "[Quality Check] Critical Stress Analysis",
+            "start": "2022-02-20T15:00:00.000Z",
+            "end": "2022-02-21T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-2-5-2",
+            "title": "[Quality Check] Critical Stress Analysis",
+            "start": "2022-02-21T15:00:00.000Z",
+            "end": "2022-02-22T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      },
+      {
+        "id": "t-2-6",
+        "title": "[Quality Check] Random Iso. Dwg. (UG)",
+        "elements": [
+          {
+            "id": "t-2-6-1",
+            "title": "[Quality Check] Random Iso. Dwg. (UG)",
+            "start": "2022-04-19T15:00:00.000Z",
+            "end": "2022-04-20T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-2-6-2",
+            "title": "[Quality Check] Random Iso. Dwg. (UG)",
+            "start": "2022-04-19T15:00:00.000Z",
+            "end": "2022-04-20T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      },
+      {
+        "id": "t-2-7",
+        "title": "[Quality Check] Random Iso. Dwg. (AG)_1st",
+        "elements": [
+          {
+            "id": "t-2-7-1",
+            "title": "[Quality Check] Random Iso. Dwg. (AG)_1st",
+            "start": "2022-05-15T15:00:00.000Z",
+            "end": "2022-05-16T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-2-7-2",
+            "title": "[Quality Check] Random Iso. Dwg. (AG)_1st",
+            "start": "2022-05-15T15:00:00.000Z",
+            "end": "2022-05-16T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      },
+      {
+        "id": "t-2-8",
+        "title": "[Quality Check] Random Iso. Dwg. (AG)_2st",
+        "elements": [
+          {
+            "id": "t-2-8-1",
+            "title": "[Quality Check] Random Iso. Dwg. (AG)_2st",
+            "start": "2022-07-17T15:00:00.000Z",
+            "end": "2022-07-18T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-2-8-2",
+            "title": "[Quality Check] Random Iso. Dwg. (AG)_2st",
+            "start": "2022-07-19T15:00:00.000Z",
+            "end": "2022-07-20T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      },
+      {
+        "id": "t-2-9",
+        "title": "Review of Plot Plan",
+        "elements": [
+          {
+            "id": "t-2-9-1",
+            "title": "Review of Plot Plan",
+            "start": "2021-11-21T15:00:00.000Z",
+            "end": "2021-11-22T14:00:00.000Z",
+            "type": "plan"
+          },
+          {
+            "id": "t-2-9-2",
+            "title": "Review of Plot Plan",
+            "start": "2021-11-24T15:00:00.000Z",
+            "end": "2021-11-25T14:00:00.000Z",
+            "type": "act"
+          }
+        ]
+      }
+    ]
+  }
+]
