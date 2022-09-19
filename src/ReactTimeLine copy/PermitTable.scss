@@ -91,3 +91,37 @@
     }
   }
 }
+
+.reactTimeLine {
+  position: relative;
+  .reactTimeLineLengendBox {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 44px;
+    display: flex;
+
+    font: normal normal bold 0.9rem Pretendard !important;
+
+    .reactTimeLineLengend {
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      .reactTimeLineLengendTitle {
+        padding-right: 5px;
+      }
+
+      .reactTimeLineLengendColorBox {
+        width: 30px;
+        text-align: left;
+
+        .reactTimeLineLengendColor {
+          width: 20px;
+          height: 30px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

@@ -278,7 +278,7 @@ const ReactTimeLine2 = () => {
             com.firstChild.firstChild.className =
               "rt-element__content milestone";
             com.firstChild.firstChild.style.position = "absolute";
-            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.fontSize = "0.9rem";
             com.firstChild.firstChild.style.width = "100px";
             com.firstChild.firstChild.style.left = "-50px";
 
@@ -300,7 +300,7 @@ const ReactTimeLine2 = () => {
             com.firstChild.firstChild.className =
               "rt-element__content milestone";
             com.firstChild.firstChild.style.position = "absolute";
-            com.firstChild.firstChild.style.fontSize = "13px";
+            com.firstChild.firstChild.style.fontSize = "0.9rem";
             com.firstChild.firstChild.style.width = "100px";
             com.firstChild.firstChild.style.left = "-50px";
 
@@ -475,6 +475,44 @@ const ReactTimeLine2 = () => {
 
   return (
     <div className="reactTimeLine">
+      <div className="reactTimeLineLengendBox">
+        <div className="reactTimeLineLengend">
+          <div className="reactTimeLineLengendTitle">Not Started:</div>
+          <div className="reactTimeLineLengendColorBox">
+            <div
+              className="reactTimeLineLengendColor"
+              style={{ backgroundColor: "#FE7F2D" }}
+            />
+          </div>
+        </div>
+        <div className="reactTimeLineLengend">
+          <div className="reactTimeLineLengendTitle">In Progress:</div>
+          <div className="reactTimeLineLengendColorBox">
+            <div
+              className="reactTimeLineLengendColor"
+              style={{ backgroundColor: "yellow" }}
+            />
+          </div>
+        </div>
+        <div className="reactTimeLineLengend">
+          <div className="reactTimeLineLengendTitle">Finished:</div>
+          <div className="reactTimeLineLengendColorBox">
+            <div
+              className="reactTimeLineLengendColor"
+              style={{ backgroundColor: "gray" }}
+            />
+          </div>
+        </div>
+        <div className="reactTimeLineLengend">
+          <div className="reactTimeLineLengendTitle">Delay:</div>
+          <div className="reactTimeLineLengendColorBox">
+            <div
+              className="reactTimeLineLengendColor"
+              style={{ backgroundColor: "red" }}
+            />
+          </div>
+        </div>
+      </div>
       {/* <h1 className="title">React Timelines</h1> */}
       {option.tracks.length > 0 && (
         <Timeline
