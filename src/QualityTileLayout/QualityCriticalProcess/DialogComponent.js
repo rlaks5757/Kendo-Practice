@@ -18,14 +18,14 @@ const DialogComponent = ({
     );
 
     const planTrackItem = trackItems.find(
-      (com) => (com.id = `${split_id[0]}-${split_id[1]}-${split_id[2]}-1`)
+      (com) => com.id === `${split_id[0]}-${split_id[1]}-${split_id[2]}-1`
     );
 
     const actTrackItem = trackItems.find(
-      (com) => (com.id = `${split_id[0]}-${split_id[1]}-${split_id[2]}-2`)
+      (com) => com.id === `${split_id[0]}-${split_id[1]}-${split_id[2]}-2`
     );
 
-    if (filterTrackItems.lenght > 1) {
+    if (filterTrackItems.length > 1) {
       setDialogContent({
         title: filterTrackItems[0].title,
         plan_date: moment(new Date(planTrackItem.start)).format(

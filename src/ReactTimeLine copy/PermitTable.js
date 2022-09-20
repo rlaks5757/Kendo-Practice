@@ -1,13 +1,25 @@
 import React, { useRef, useEffect } from "react";
 import moment from "moment";
 
-const PermitTable = ({ dialogContents }) => {
+const PermitTable = ({ dialogContents, toggleDialog }) => {
   const permitTableBody = useRef();
 
   useEffect(() => {
     const targetNode = permitTableBody.current.parentNode;
     targetNode.style.padding = 0;
   }, []);
+
+  useEffect(() => {
+    if (toggleDialog) {
+      const dialogHeaderNode =
+        permitTableBody.current.parentNode.previousSibling;
+
+      const addHeaderClassName = " permitMilestoneTableHeader";
+
+      dialogHeaderNode.className =
+        dialogHeaderNode.className + addHeaderClassName;
+    }
+  }, [toggleDialog]);
 
   return (
     <div className="permitTable" ref={permitTableBody}>
@@ -26,13 +38,13 @@ const PermitTable = ({ dialogContents }) => {
         <div className="permitTableContents2">
           <div>
             {dialogContents.PlanSubmissionDate !== null &&
-              moment(dialogContents.PlanSubmissionDate).format(
+              moment(new Date(dialogContents.PlanSubmissionDate)).format(
                 "YY년 MM월 DD일"
               )}
           </div>
           <div>
             {dialogContents.ActualSubmissionDate !== null &&
-              moment(dialogContents.ActualSubmissionDate).format(
+              moment(new Date(dialogContents.ActualSubmissionDate)).format(
                 "YY년 MM월 DD일"
               )}
           </div>
@@ -49,11 +61,13 @@ const PermitTable = ({ dialogContents }) => {
         <div className="permitTableContents2">
           <div>
             {dialogContents.PlanObtainedDate !== null &&
-              moment(dialogContents.PlanObtainedDate).format("YY년 MM월 DD일")}
+              moment(new Date(dialogContents.PlanObtainedDate)).format(
+                "YY년 MM월 DD일"
+              )}
           </div>
           <div>
             {dialogContents.ActualObtainedDate !== null &&
-              moment(dialogContents.ActualObtainedDate).format(
+              moment(new Date(dialogContents.ActualObtainedDate)).format(
                 "YY년 MM월 DD일"
               )}
           </div>

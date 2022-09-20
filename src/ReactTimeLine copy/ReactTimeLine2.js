@@ -9,13 +9,16 @@ import Url from "../url";
 import "react-timelines/lib/css/style.css";
 import "./ReactTimeLine2.scss";
 
-const now = new Date();
+const today = new Date();
+today.setHours(0);
+today.setMinutes(0);
+today.setSeconds(0);
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
 
 const ReactTimeLine2 = () => {
-  const params = useParams();
+  const { project_code } = useParams();
 
   const [timeBar, setTimeBar] = useState([]);
   const [option, setOption] = useState({
@@ -35,19 +38,37 @@ const ReactTimeLine2 = () => {
 
   useEffect(() => {
     const axiosData = async () => {
-      const unifierData = await axios.get(
-        `${Url}/timeLine/${params.project_code}`
+      let body = {
+        bpname: "Project Permit List (Domestic)",
+        lineitem: "yes",
+        filter_condition: "status=Active",
+      };
+
+      let body2 = {
+        bpname: "Project Milestone",
+        lineitem: "yes",
+        filter_condition: "status=Active",
+      };
+
+      const res = await axios.post(
+        `${Url}/getbprecord?path=${project_code}`,
+        body
+      );
+
+      const res2 = await axios.post(
+        `${Url}/getbprecord?path=${project_code}`,
+        body2
       );
 
       /**
        * Requset Premit Data
        */
-      const unifierDataResult = await unifierData.data.data1;
+      const unifierDataResult = await res.data.data.data;
 
       /**
        * Requset Milestone Data
        */
-      const unifierDataResult2 = await unifierData.data.data2;
+      const unifierDataResult2 = await res2.data.data.data;
 
       const milestoneData = {
         id: "track-1",
@@ -246,7 +267,7 @@ const ReactTimeLine2 = () => {
     };
 
     axiosData();
-  }, [params.project_code]);
+  }, [project_code]);
 
   useEffect(() => {
     const timeLine = document.querySelector(".rt-tracks");
@@ -255,9 +276,9 @@ const ReactTimeLine2 = () => {
       timeLine.firstChild.firstChild.childNodes.forEach((com, idx) => {
         const spans = document.createElement("span");
         spans.className = "rt-element__title2";
-        spans.innerHTML = moment(option.tracks[0].elements[idx].start).format(
-          "MM-DD-YYYY"
-        );
+        spans.innerHTML = moment(
+          new Date(option.tracks[0].elements[idx].start)
+        ).format("MM-DD-YYYY");
 
         const divs = document.createElement("div");
         divs.style.width = "100%";
@@ -273,38 +294,35 @@ const ReactTimeLine2 = () => {
             changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
             changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
-            com.firstChild.firstChild.style.top = "0px";
+            changeWidthNode.className = "rt-element__content milestone";
+            changeWidthNode.style.position = "absolute";
+            changeWidthNode.style.top = "0px";
+            changeWidthNode.style.fontSize = "0.9rem";
+            changeWidthNode.style.width = "100px";
+            changeWidthNode.style.left = "-50px";
 
-            com.firstChild.firstChild.className =
-              "rt-element__content milestone";
-            com.firstChild.firstChild.style.position = "absolute";
-            com.firstChild.firstChild.style.fontSize = "0.9rem";
-            com.firstChild.firstChild.style.width = "100px";
-            com.firstChild.firstChild.style.left = "-50px";
-
-            com.firstChild.firstChild.appendChild(spans);
+            changeWidthNode.appendChild(spans);
 
             divs.appendChild(icons);
             com.style.top = "-5px";
             com.appendChild(divs);
           }
         } else {
-          const changeWidthNode = com.lastChild.firstChild;
+          const changeWidthNode2 = com.lastChild.firstChild;
+          const changeWidthNode = com.firstChild.firstChild;
 
-          if (changeWidthNode.className.includes("milestone")) {
-            changeWidthNode.style.width = 100 + (option.zoom - 1) * 50 + "px";
-            changeWidthNode.style.left = -50 + (option.zoom - 1) * -25 + "px";
+          if (changeWidthNode2.className.includes("milestone")) {
+            changeWidthNode2.style.width = 100 + (option.zoom - 1) * 50 + "px";
+            changeWidthNode2.style.left = -50 + (option.zoom - 1) * -25 + "px";
           } else {
-            com.firstChild.firstChild.style.top = "15px";
+            changeWidthNode.className = "rt-element__content milestone";
+            changeWidthNode.style.position = "absolute";
+            changeWidthNode.style.top = "15px";
+            changeWidthNode.style.fontSize = "0.9rem";
+            changeWidthNode.style.width = "100px";
+            changeWidthNode.style.left = "-50px";
 
-            com.firstChild.firstChild.className =
-              "rt-element__content milestone";
-            com.firstChild.firstChild.style.position = "absolute";
-            com.firstChild.firstChild.style.fontSize = "0.9rem";
-            com.firstChild.firstChild.style.width = "100px";
-            com.firstChild.firstChild.style.left = "-50px";
-
-            com.firstChild.firstChild.appendChild(spans);
+            changeWidthNode.appendChild(spans);
 
             divs.appendChild(icons);
 
@@ -474,73 +492,76 @@ const ReactTimeLine2 = () => {
   }, []);
 
   return (
-    <div className="reactTimeLine">
-      <div className="reactTimeLineLengendBox">
-        <div className="reactTimeLineLengend">
-          <div className="reactTimeLineLengendTitle">Not Started:</div>
-          <div className="reactTimeLineLengendColorBox">
-            <div
-              className="reactTimeLineLengendColor"
-              style={{ backgroundColor: "#FE7F2D" }}
-            />
+    <div className="permitMilestoneTotal">
+      <div className="permitMilestoneHeader">Permit Milestone</div>
+      <div className="permitMilestoneContents">
+        <div className="permitMilestoneLengendBox">
+          <div className="permitMilestoneLengend">
+            <div className="permitMilestoneLengendTitle">Not Started:</div>
+            <div className="permitMilestoneLengendColorBox">
+              <div
+                className="permitMilestoneLengendColor"
+                style={{ backgroundColor: "#FE7F2D" }}
+              />
+            </div>
+          </div>
+          <div className="permitMilestoneLengend">
+            <div className="permitMilestoneLengendTitle">In Progress:</div>
+            <div className="permitMilestoneLengendColorBox">
+              <div
+                className="permitMilestoneLengendColor"
+                style={{ backgroundColor: "yellow" }}
+              />
+            </div>
+          </div>
+          <div className="permitMilestoneLengend">
+            <div className="permitMilestoneLengendTitle">Finished:</div>
+            <div className="permitMilestoneLengendColorBox">
+              <div
+                className="permitMilestoneLengendColor"
+                style={{ backgroundColor: "gray" }}
+              />
+            </div>
+          </div>
+          <div className="permitMilestoneLengend">
+            <div className="permitMilestoneLengendTitle">Delay:</div>
+            <div className="permitMilestoneLengendColorBox">
+              <div
+                className="permitMilestoneLengendColor"
+                style={{ backgroundColor: "red" }}
+              />
+            </div>
           </div>
         </div>
-        <div className="reactTimeLineLengend">
-          <div className="reactTimeLineLengendTitle">In Progress:</div>
-          <div className="reactTimeLineLengendColorBox">
-            <div
-              className="reactTimeLineLengendColor"
-              style={{ backgroundColor: "yellow" }}
-            />
-          </div>
-        </div>
-        <div className="reactTimeLineLengend">
-          <div className="reactTimeLineLengendTitle">Finished:</div>
-          <div className="reactTimeLineLengendColorBox">
-            <div
-              className="reactTimeLineLengendColor"
-              style={{ backgroundColor: "gray" }}
-            />
-          </div>
-        </div>
-        <div className="reactTimeLineLengend">
-          <div className="reactTimeLineLengendTitle">Delay:</div>
-          <div className="reactTimeLineLengendColorBox">
-            <div
-              className="reactTimeLineLengendColor"
-              style={{ backgroundColor: "red" }}
-            />
-          </div>
-        </div>
+        {option.tracks.length > 0 && (
+          <Timeline
+            scale={{
+              start,
+              end,
+              zoom: option.zoom,
+              zoomMin: MIN_ZOOM,
+              zoomMax: MAX_ZOOM,
+            }}
+            isOpen={option.open}
+            toggleOpen={handleToggleOpen}
+            zoomIn={handleZoomIn}
+            zoomOut={handleZoomOut}
+            clickElement={clickElement}
+            timebar={timeBar}
+            tracks={option.tracks}
+            now={today}
+            enableSticky={false}
+          />
+        )}
+        {toggleDialog && (
+          <DialogComponent
+            handleDialog={handleDialog}
+            dialogContents={dialogContents}
+            projectStartEnd={projectStartEnd}
+            toggleDialog={toggleDialog}
+          ></DialogComponent>
+        )}
       </div>
-      {/* <h1 className="title">React Timelines</h1> */}
-      {option.tracks.length > 0 && (
-        <Timeline
-          scale={{
-            start,
-            end,
-            zoom: option.zoom,
-            zoomMin: MIN_ZOOM,
-            zoomMax: MAX_ZOOM,
-          }}
-          isOpen={option.open}
-          toggleOpen={handleToggleOpen}
-          zoomIn={handleZoomIn}
-          zoomOut={handleZoomOut}
-          clickElement={clickElement}
-          timebar={timeBar}
-          tracks={option.tracks}
-          now={now}
-          enableSticky={false}
-        />
-      )}
-      {toggleDialog && (
-        <DialogComponent
-          handleDialog={handleDialog}
-          dialogContents={dialogContents}
-          projectStartEnd={projectStartEnd}
-        ></DialogComponent>
-      )}
     </div>
   );
 };
@@ -548,17 +569,8 @@ const ReactTimeLine2 = () => {
 export default ReactTimeLine2;
 
 const addStatus = (target_obj) => {
-  const {
-    PlanSubmissionDate,
-    // PlanObtainedDate,
-    ActualSubmissionDate,
-    ActualObtainedDate,
-  } = target_obj;
-
-  const today = new Date();
-  today.setHours(0);
-  today.setMinutes(0);
-  today.setSeconds(0);
+  const { PlanSubmissionDate, ActualSubmissionDate, ActualObtainedDate } =
+    target_obj;
 
   if (ActualSubmissionDate === null && ActualObtainedDate === null) {
     if (new Date(PlanSubmissionDate) < today) {

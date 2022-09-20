@@ -1,13 +1,25 @@
 import React, { useRef, useEffect } from "react";
 import moment from "moment";
 
-const MilestoneTable = ({ dialogContents, projectStartEnd }) => {
+const MilestoneTable = ({ dialogContents, projectStartEnd, toggleDialog }) => {
   const permitTableBody = useRef();
 
   useEffect(() => {
     const targetNode = permitTableBody.current.parentNode;
     targetNode.style.padding = 0;
   }, []);
+
+  useEffect(() => {
+    if (toggleDialog) {
+      const dialogHeaderNode =
+        permitTableBody.current.parentNode.previousSibling;
+
+      const addHeaderClassName = " permitMilestoneTableHeader";
+
+      dialogHeaderNode.className =
+        dialogHeaderNode.className + addHeaderClassName;
+    }
+  }, [toggleDialog]);
 
   return (
     <div className="permitTable" ref={permitTableBody}>

@@ -4,7 +4,12 @@ import PermitTable from "./PermitTable";
 import MilestoneTable from "./MilestoneTable";
 import "./PermitTable.scss";
 
-const DialogComponent = ({ handleDialog, dialogContents, projectStartEnd }) => {
+const DialogComponent = ({
+  handleDialog,
+  dialogContents,
+  projectStartEnd,
+  toggleDialog,
+}) => {
   return (
     <Dialog
       title={
@@ -16,11 +21,15 @@ const DialogComponent = ({ handleDialog, dialogContents, projectStartEnd }) => {
       width={"30%"}
     >
       {dialogContents.position === undefined ? (
-        <PermitTable dialogContents={dialogContents} />
+        <PermitTable
+          dialogContents={dialogContents}
+          toggleDialog={toggleDialog}
+        />
       ) : (
         <MilestoneTable
           dialogContents={dialogContents}
           projectStartEnd={projectStartEnd}
+          toggleDialog={toggleDialog}
         />
       )}
     </Dialog>

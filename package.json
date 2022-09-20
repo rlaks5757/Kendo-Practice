@@ -34,6 +34,7 @@
     "react-scripts": "5.0.1",
     "react-timelines": "^2.6.1",
     "sass": "^1.54.3",
+    "use-breakpoint": "^3.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

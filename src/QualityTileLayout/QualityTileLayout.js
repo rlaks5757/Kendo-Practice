@@ -1,45 +1,59 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { TileLayout } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
-import useViewPort from "../Hooks/useViewPort";
+import useBreakpoint from "use-breakpoint";
 import "hammerjs";
 import "@progress/kendo-theme-default/dist/all.css";
-import ReactTimeLineQuality from "../ReactTimeLineQuality/ReactTimeLineQuality";
+import QualityCriticalProcess from "./QualityCriticalProcess/QualityCriticalProcess";
 import "./QualityTileLayout.scss";
 
+const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
+
 const QualityTileLayout = () => {
-  const { width } = useViewPort();
+  const { breakpoint } = useBreakpoint(BREAKPOINTS, "desktop");
 
   const [selected, setSelected] = useState(false);
 
-  const [positionData, setPositionData] = useState(pcView);
+  const [positionData, setPositionData] = useState(viewTotal[breakpoint]);
 
   const [tiles, setTiles] = useState([]);
 
   const tilesData = useMemo(
     () => [
       {
-        header: <div>Quality Process</div>,
-        body: (
-          <div className="reactTimeLineQualityBody">
-            <ReactTimeLineQuality positionData={positionData} />
-          </div>
-        ),
+        header: "Total Status",
+        body: "",
+        resizable: !selected,
         reorderable: !selected,
       },
       {
-        header: "Lessons & Learned Status",
+        header: "2",
         body: "",
+        resizable: !selected,
         reorderable: !selected,
       },
       {
-        header: "Document Change Status",
+        header: "3",
         body: "",
+        resizable: !selected,
         reorderable: !selected,
       },
       {
-        header: "COPQ",
+        header: "4",
         body: "",
+        resizable: !selected,
+        reorderable: !selected,
+      },
+      {
+        header: "5",
+        body: "",
+        resizable: !selected,
+        reorderable: !selected,
+      },
+      {
+        header: <div>Quality Critical Process</div>,
+        body: <QualityCriticalProcess positionData={positionData} />,
+        resizable: !selected,
         reorderable: !selected,
       },
     ],
@@ -47,20 +61,16 @@ const QualityTileLayout = () => {
   );
 
   useEffect(() => {
-    if (width > 768) {
-      setPositionData(pcView);
-    } else {
-      setPositionData(mobileView);
-    }
-  }, [width]);
+    setPositionData(viewTotal[breakpoint]);
+  }, [breakpoint]);
 
   useEffect(() => {
     setTiles(tilesData);
   }, [tilesData]);
 
-  const handleReposition = (e) => {
+  const handleReposition = useCallback((e) => {
     setPositionData(e.value);
-  };
+  }, []);
 
   return (
     <div className="titleLayout">
@@ -80,7 +90,7 @@ const QualityTileLayout = () => {
       </Button>
       {positionData.length > 0 && (
         <TileLayout
-          columns={4}
+          columns={8}
           rowHeight={255}
           positions={positionData}
           gap={{
@@ -89,6 +99,7 @@ const QualityTileLayout = () => {
           }}
           items={tiles}
           onReposition={handleReposition}
+          autoFlow="row dense"
         />
       )}
     </div>
@@ -97,52 +108,101 @@ const QualityTileLayout = () => {
 
 export default QualityTileLayout;
 
-const pcView = [
-  {
-    col: 1,
-    colSpan: 4,
-    rowSpan: 3,
-    order: 1,
-  },
-  {
-    col: 1,
-    colSpan: 2,
-    rowSpan: 1,
-    order: 2,
-  },
-  {
-    col: 3,
-    colSpan: 1,
-    rowSpan: 1,
-    order: 3,
-  },
-  {
-    col: 4,
-    colSpan: 1,
-    rowSpan: 1,
-    order: 4,
-  },
-];
-
-const mobileView = [
-  {
-    col: 1,
-    colSpan: 4,
-    rowSpan: 1,
-  },
-  {
-    col: 1,
-    colSpan: 1,
-    rowSpan: 1,
-  },
-  {
-    col: 1,
-    colSpan: 1,
-    rowSpan: 1,
-  },
-  {
-    col: 1,
-    colSpan: 1,
-    rowSpan: 1,
-  },
-];
+const viewTotal = {
+  desktop: [
+    {
+      col: 1,
+      colSpan: 2,
+      rowSpan: 2,
+    },
+    {
+      col: 3,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 6,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 3,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 6,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 3,
+    },
+  ],
+  tablet: [
+    {
+      col: 1,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 4,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 7,
+      colSpan: 2,
+      rowSpan: 2,
+    },
+    {
+      col: 1,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 4,
+      colSpan: 3,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 3,
+    },
+  ],
+  mobile: [
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 1,
+    },
+    {
+      col: 1,
+      colSpan: 8,
+      rowSpan: 3,
+    },
+  ],
+};

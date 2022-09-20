@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
 import Timeline from "react-timelines";
 import axios from "axios";
 import _ from "lodash";
 import DialogComponent from "./DialogComponent";
-import Url from "../url";
-import "./ReactTimeLineQuality.scss";
+import Url from "../../url";
+import "./QualityCriticalProcess.scss";
 import "react-timelines/lib/css/style.css";
 
 const now = new Date();
@@ -13,8 +13,9 @@ const now = new Date();
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 20;
 
-const ReactTimeLineQuality = ({ positionData }) => {
-  const params = useParams();
+const QualityCriticalProcess = ({ positionData }) => {
+  const { project_code } = useParams();
+  const qualityCriticalProcess = useRef();
 
   const [timeBar, setTimeBar] = useState([]);
   const [option, setOption] = useState({});
@@ -31,13 +32,20 @@ const ReactTimeLineQuality = ({ positionData }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const unifierData = await axios.get(
-        `${Url}/qualityProcess/${params.project_code}`
+      let body = {
+        bpname: "Quality Critical Process",
+        lineitem: "yes",
+        filter_condition: "status=Active",
+      };
+
+      const unifierData = await axios.post(
+        `${Url}/getbprecord?path=${project_code}`,
+        body
       );
 
       const axiosData =
-        unifierData.data.data1[unifierData.data.data1.length - 1];
-      console.log(unifierData);
+        unifierData.data.data.data[unifierData.data.data.data.length - 1];
+
       const createTracks = _.uniqBy(axiosData._bp_lineitems, "EngDisc_spd").map(
         (com, idx) => {
           return {
@@ -156,7 +164,7 @@ const ReactTimeLineQuality = ({ positionData }) => {
     };
 
     fetchData();
-  }, [params, positionData]);
+  }, [project_code, positionData]);
 
   useEffect(() => {
     const MONTH_NAMES = [
@@ -278,6 +286,13 @@ const ReactTimeLineQuality = ({ positionData }) => {
     }
   }, [option]);
 
+  useEffect(() => {
+    const addClassName = " qualityCriticalProcessBody";
+    const parentNode = qualityCriticalProcess.current.parentNode;
+
+    parentNode.className = parentNode.className + addClassName;
+  }, []);
+
   const handleToggleOpen = () => {
     setOption((prev) => {
       return { ...prev, open: !prev.open };
@@ -319,7 +334,7 @@ const ReactTimeLineQuality = ({ positionData }) => {
   }, []);
 
   return (
-    <div className="reactTimeLineQuality">
+    <div className="qualityCriticalProcess" ref={qualityCriticalProcess}>
       <div className="iconslengend">
         <div className="iconslengendBox">
           <div>Plan Date:</div>
@@ -363,7 +378,7 @@ const ReactTimeLineQuality = ({ positionData }) => {
   );
 };
 
-export default ReactTimeLineQuality;
+export default QualityCriticalProcess;
 
 const createTrackItems = (base_arr, engDisc_spd, index) => {
   const planItems = base_arr

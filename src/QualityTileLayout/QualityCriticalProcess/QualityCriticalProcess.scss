@@ -1,5 +1,13 @@
-.reactTimeLineQuality {
+.qualityCriticalProcessBody {
+  padding: 0;
+}
+
+.qualityCriticalProcess {
   position: relative;
+
+  .rt-controls {
+    background-color: rgba(#fff, 0);
+  }
 
   .rt-layout__side {
     width: 380px;
@@ -8,19 +16,6 @@
   .rt-layout__main {
     width: calc(100% - 380px);
   }
-
-  // .rt-track-key__entry {
-  //   height: 100px;
-  // }
-
-  // .rt-track__elements {
-  //   height: 100px;
-  // }
-
-  // .rt-track__element {
-  //   top: 30px;
-  //   min-width: 20px;
-  // }
 
   .k-icon.k-i-circle {
     font-size: 30px;
@@ -77,13 +72,16 @@
     top: 0;
     right: 0;
     z-index: 100;
-
+    display: flex;
+    align-items: center;
+    height: 60px;
     padding: 5px 20px;
 
     .iconslengendBox {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: flex-end;
+      width: 120px;
 
       .qualityAct {
         color: red;
@@ -107,4 +105,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.k-tilelayout-item-header.k-card-header {
+  background: #7f84ab 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 6px #00000029;
+  color: #fff;
+  font-family: Pretendard-B;
+  font-size: 16px;
+  opacity: 1;
+  font-weight: bolder;
 }
